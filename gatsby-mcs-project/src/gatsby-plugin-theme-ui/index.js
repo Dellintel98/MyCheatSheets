@@ -12,9 +12,19 @@ const theme = {
     },
     colors: {
         ...roboto.colors,
-        primary: "#181c32",
-        secondary: "#333f60",
-        accent: "#f2f2f2",
+        text: roboto.colors.text, // Website text color
+        background: roboto.colors.background, // Background color
+        primary: "#181c32", // Primary button and link color
+        secondary: "#141729", // Secondary color for hover states
+        accent: "#dd270f", // Color for emphasizing UI elements, e.g. delete button
+        accentHover: "#a11d0b", // Color for hover state of accented elements
+        muted: roboto.colors.muted, // Grey color for decorative purposes, e.g. button's shadow
+        codeBackground: "#e5e5e5", // Background color for code container
+        grey: ["#f2f2f2", "#c4c4c4", "#acacac"], // Grey colors for elements
+        highlight: ["#bfd3df", "#77a1ba"], // Colors for input field highlight
+        alternate: "#5d73b0", // Alternate color for regular buttons
+        alternateHover: "#333f60", // Hover color for alternate
+        slogan: "#232325", //Color for slogan on index page
     },
     fontWeights: {
         ...roboto.fontWeights,
