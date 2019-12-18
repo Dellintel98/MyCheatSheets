@@ -1,52 +1,62 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Global } from "@emotion/core"
+import { css } from "theme-ui"
 
-import Header from "./header"
-import "./layout.css"
+import Navigation from "./navigation"
 
-const Layout = ({ children }) => {
+
+//isAdmin = true
+//style={isAdmin ? myStyles1 : myStyles2}
+
+const Layout = props => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    {
       site {
         siteMetadata {
-          title
+          menuItems {
+            link
+            text
+          }
         }
       }
     }
   `)
 
+  console.log(data)
+  const {siteMetadata: {menuItems}} = data.site
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Global 
+        styles={css({
+          "*": {
+            margin: 0,
+            padding: 0,
+          },
+          body: {
+            boxSizing: `border box`,
+            textRendering: `optimizeLegibility`,
+            MozOsxFontSmoothing: `grayscale`,
+            WebkitFontSmoothing: `antialiased`,
+            backgroundColor: `background`,
+            color: `text`,
+            lineHeight: `body`,
+            fontFamily: `body`,
+            fontWeight: `body`,
+          },
+          a: {
+            textDecoration: "none",
+          },
+        })}
+      />
+
+      <div>
+        <Navigation menuItems={menuItems} />
+        {props.children}
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
