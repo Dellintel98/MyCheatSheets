@@ -1,9 +1,18 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import Layout from "../components/layout";
+import SideBar from "../components/sidebar"
+import Body from "../components/body"
+import BodyContent from "../components/body-content"
 
-const Forum = () => ( 
+const Forum = () => (
     <Layout>
-        <h1>Forum</h1>
+        <Body>
+            <BodyContent>
+                <h1>Forum</h1>
+            </BodyContent>
+            <SideBar />
+        </Body>
     </Layout>
 )
 
