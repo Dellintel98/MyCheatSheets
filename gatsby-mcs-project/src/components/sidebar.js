@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import { jsx } from "theme-ui"
 
 const Card = () => {
-    return(
-        <div 
+    return (
+        <div
             sx={{
                 width: "30px",
                 height: "30px",
@@ -14,10 +14,10 @@ const Card = () => {
 }
 
 const SideBar = props => {
-    return(
+    return (
         <div
             sx={{
-                width: "100px",
+                width: "400px",
                 height: "100px",
                 display: "flex",
                 alignItems: "center",
