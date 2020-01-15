@@ -4,28 +4,28 @@ module.exports = {
     description: `Find or make your own developer cheat sheets. Get community help and help the community yourself.`,
     menuItems: [
       {
-          text: "Home",
-          link: "/",
+        text: "Home",
+        link: "/",
       },
       {
-          text: "Sheets",
-          link: "/sheets",
+        text: "Sheets",
+        link: "/sheets",
       },
       {
-          text: "Creators",
-          link: "/creators",
+        text: "Creators",
+        link: "/creators",
       },
       {
-          text: "News",
-          link: "/news",
+        text: "News",
+        link: "/news",
       },
       {
-          text: "Forum",
-          link: "/forum",
+        text: "Forum",
+        link: "/forum",
       },
       {
-          text: "My sheets",
-          link: "/mysheets",
+        text: "My sheets",
+        link: "/mysheets",
       }
     ],
     author: [`AO`, `AJS`],
