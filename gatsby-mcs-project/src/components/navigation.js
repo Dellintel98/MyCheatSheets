@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx, Header} from "theme-ui"
+import { jsx, Header } from "theme-ui"
 import { Link } from "gatsby"
 
 import logo from "../images/main-logo.png"
@@ -10,8 +10,8 @@ import LogInOutCard from "./navigationScripts/log-in-out-card"
 import HiddenMenu from "./navigationScripts/hidden-menu"
 
 const LogoLink = () => {
-    return(
-        <Link to="/" sx={{display: "flex", alignItems: "center"}}>
+    return (
+        <Link to="/" sx={{ display: "flex", alignItems: "center" }}>
             <img
                 src={logo}
                 alt="My Cheat Sheet logo"
@@ -26,8 +26,8 @@ const LogoLink = () => {
 }
 
 const NavLink = prop => {
-    return(
-        <Link 
+    return (
+        <Link
             {...prop}
             sx={{
                 mx: 2,
@@ -37,8 +37,8 @@ const NavLink = prop => {
     )
 }
 
-const NavLinks = ({menuItems}) => {
-    return(    
+const NavLinks = ({ menuItems }) => {
+    return (
         <nav
             sx={{
                 display: "flex",
@@ -46,7 +46,7 @@ const NavLinks = ({menuItems}) => {
                 justifyContent: "space-between",
             }}
         >
-            {menuItems.map(({link, text}) => (
+            {menuItems.map(({ link, text }) => (
                 <NavLink key={text} to={link}>
                     {text}
                 </NavLink>
@@ -55,8 +55,8 @@ const NavLinks = ({menuItems}) => {
     )
 }
 
-const NavBar = ({menuItems}) => {
-    return(
+const NavBar = ({ menuItems }) => {
+    return (
         <NavContainer
             sx={{
                 backgroundColor: "green",
@@ -75,7 +75,7 @@ const NavBar = ({menuItems}) => {
 }
 
 
-const Navigation = ({menuItems}) => {
+const Navigation = ({ menuItems }) => {
 
     return (
         <Header

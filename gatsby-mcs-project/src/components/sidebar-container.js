@@ -7,8 +7,9 @@ const SideBarContainer = props => {
         <Container
             {...props}
             sx={{
-                maxWidth: "100px",
-                backgroundColor: "pink"
+                maxWidth: "80%",
+                height: "flex",
+
             }}
         />
     )
