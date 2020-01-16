@@ -1,4 +1,4 @@
-import {roboto} from "@theme-ui/presets"
+import { roboto } from "@theme-ui/presets"
 
 const theme = {
     ...roboto,

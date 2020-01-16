@@ -1,32 +1,21 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-const Card = () => {
-    return (
-        <div
-            sx={{
-                width: "30px",
-                height: "30px",
-                backgroundColor: "tomato",
-            }}
-        />
-    )
-}
 
 const SideBar = props => {
     return (
         <div
+            {...props}
             sx={{
                 width: "400px",
-                height: "100px",
+                height: "100%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                backgroundColor: "yellow",
+                backgroundColor: "#f2f2f2",
             }}
         >
-            Ovo je side bar
-            <Card />
+
         </div>
     )
 }
