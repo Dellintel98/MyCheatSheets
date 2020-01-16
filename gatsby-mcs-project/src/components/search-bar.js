@@ -8,19 +8,24 @@ const SearchBar = () => {
             placeholder="Search..."
             //autoFocus={true}
             sx={{
-                width: "100px",
-                py: 2,
-                paddingLeft: 4,
+                width: "180px",
+                py: 1,
+                paddingLeft: 3,
+                mx: 2,
                 my: 1,
                 overflow: "hidden",
-                borderWidth: 0,
-                color: "text",
+                borderWidth: "1px",
+                borderRadius: "4px",
+                borderColor: "primary",
+                color: "secondary",
+                font: "roboto",
                 fontSize: 1,
-                fontWeight: "body",
-                backgroundColor: "primary",
+                fontWeight: 300,
+                lineHeight: 1.125,
+                backgroundColor: "background",
                 "&:focus": {
                     outline: "none",
-                    backgroundColor: "accent",
+                    backgroundColor: "backgroundGrey",
                 },
             }}
         />

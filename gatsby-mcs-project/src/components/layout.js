@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
@@ -23,7 +25,6 @@ const Layout = props => {
     }
   `)
 
-  console.log(data)
   const {siteMetadata: {menuItems}} = data.site
 
   return (
@@ -51,7 +52,11 @@ const Layout = props => {
         })}
       />
 
-      <div>
+      <div
+        sx={{
+          height: "screenHeight",
+        }}
+      >
         <Navigation menuItems={menuItems} />
         {props.children}
       </div>

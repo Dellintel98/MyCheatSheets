@@ -7,11 +7,10 @@ const Body = props => {
             {...props}
             sx={{
                 width: "100vw",
-                height: "1080px",
+                height: "93%",
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                backgroundColor: "orange",
                 justifyContent: "space-between",
             }}
         />

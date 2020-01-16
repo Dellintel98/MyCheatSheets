@@ -4,11 +4,13 @@ const theme = {
     ...roboto,
     sizes: {
         ...roboto.sizes,
-        navLogo: "42px",
+        navLogo: "36px",
+        navTitle: "24px",
         screenWidth: "100vw",
+        screenHeight: "100vh",
         navContainerWidth: "80%",
         navContainerHeight: "44px",
-        navLinksHeight: "41px",
+        navLinksHeight: "38px",
         siteContainer: "60%",
     },
     colors: {
@@ -21,7 +23,7 @@ const theme = {
         accentHover: "#a11d0b", // Color for hover state of accented elements
         muted: roboto.colors.muted, // Grey color for decorative purposes, e.g. button's shadow
         codeBackground: "#e5e5e5", // Grey background color for code container
-        sidebarBackground: "#f2f2f2", // Grey background color for sidebar
+        backgroundGrey: "#f2f2f2", // Grey background color for sidebar or other elements, e.g. search input highlighted
         alternateGrey: "#fafafa", // Grey color for use as background color for components
         iconGrey: "#acacac", // Grey color for use in icons
         scrollBarGrey: "#c4c4c4", // Grey background color for scrollbar
