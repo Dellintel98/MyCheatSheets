@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Layout from "../components/layout";
-import SideBar from "../components/sidebar"
+import SideBarForum from "../components/sidebar-forum"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
 
@@ -11,7 +11,7 @@ const Forum = () => (
             <BodyContent>
                 <h1>Forum</h1>
             </BodyContent>
-            <SideBar />
+            <SideBarForum />
         </Body>
     </Layout>
 )
