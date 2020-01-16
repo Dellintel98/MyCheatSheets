@@ -1,9 +1,18 @@
-import React from "react"
-import Layout from "../components/layout";
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import Layout from "../components/layout"
+import SideBar from "../components/sidebar"
+import Body from "../components/body"
+import BodyContent from "../components/body-content"
 
 const News = () => ( 
     <Layout>
-        <h1>News</h1>
+        <Body>
+            <BodyContent>
+                <h1>News</h1>
+            </BodyContent>
+            <SideBar />
+        </Body>
     </Layout>
 )
 

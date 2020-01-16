@@ -16,9 +16,10 @@ const LogoLink = () => {
                 src={logo}
                 alt="My Cheat Sheet logo"
                 sx={{
-                    height: "navLogo",
+                    height: "navLogo", //proširiti i srediti da lijepo izgleda + nadodati onaj ukrasni logo naslov
                     maxHeight: "64px",
                     width: "auto",
+                    px: 1,
                 }}
             />
         </Link>
@@ -30,8 +31,18 @@ const NavLink = prop => {
         <Link 
             {...prop}
             sx={{
-                mx: 2,
-                px: 1,
+                mx: 1,
+                px: 2,
+                minWidth: "auto",
+                minHeight: "navLinksHeight",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderBottom: '3px solid white',
+                '&:hover': {
+                    bg: 'sidebarBackground',
+                    borderBottomColor: 'primary',
+                  }
             }}
         />
     )
@@ -59,7 +70,6 @@ const NavBar = ({menuItems}) => {
     return(
         <NavContainer
             sx={{
-                backgroundColor: "green",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -83,6 +93,7 @@ const Navigation = ({menuItems}) => {
                 display: "flex",
                 alignItems: "center",
                 position: "relative",
+                boxShadow: '0 0 5px rgba(0, 0, 0, 0.25)',
             }}
         >
             <Container
@@ -90,7 +101,7 @@ const Navigation = ({menuItems}) => {
                     display: "flex",
                     alignContent: "center",
                     justifyContent: "space-between",
-                    backgroundColor: "grey",
+                    backgroundColor: "background",
                 }}
             >
                 <LogoLink />
