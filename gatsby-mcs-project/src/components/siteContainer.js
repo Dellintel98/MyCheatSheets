@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import { jsx } from "theme-ui"
 import Container from "./container"
 
 const SiteContainer = props => {
-    return(
-        <Container 
+    return (
+        <Container
             {...props}
             sx={{
                 maxWidth: "siteContainer",
