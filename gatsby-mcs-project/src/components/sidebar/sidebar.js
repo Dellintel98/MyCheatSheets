@@ -12,7 +12,6 @@ const SideBar = props => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "top",
                 backgroundColor: "#f2f2f2",
 
             }}

@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import SideBar from "./sidebar"
-import Card from "./sidebar-card"
-import SideBarContainer from "./sidebar-container"
+import SideBar from "../sidebar/sidebar"
+import Card from "../sidebar/sidebar-card"
+import SideBarContainer from "../sidebar/sidebar-container"
 
 const SideBarEditor = props => {
     return (
