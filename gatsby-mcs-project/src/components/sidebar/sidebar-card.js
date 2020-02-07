@@ -6,11 +6,13 @@ const Card = props => {
         <div
             {...props}
             sx={{
-                width: "30px",
-                height: "30px",
-                backgroundColor: "tomato",
+
+                height: "flex",
+                display: "flex",
+
             }}
         />
+
     )
 }
 export default Card
