@@ -55,6 +55,7 @@ const Layout = props => {
       <div
         sx={{
           height: "screenHeight",
+          overflow: "hidden",
         }}
       >
         <Navigation menuItems={menuItems} />

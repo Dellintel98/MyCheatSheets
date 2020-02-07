@@ -3,9 +3,12 @@ import { jsx } from "theme-ui"
 
 const SideBarTitle = props => {
     return (
-        <div
+        <h3
             {...props}
             sx={{
+                fontWeight: "heading",
+                color: "primary",
+                textAlign: "center",
             }}
         />
     )

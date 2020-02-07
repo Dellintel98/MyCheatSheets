@@ -6,7 +6,8 @@ const SideBarIcon = ({ iconSrc }) => {
     return (
         <Icon iconSrc={iconSrc}
             sx={{
-                height: "navLogo",
+                height: "10%",
+                margin: "auto",
             }}
         />
     )

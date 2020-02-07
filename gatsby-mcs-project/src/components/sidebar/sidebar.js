@@ -7,17 +7,14 @@ const SideBar = props => {
         <div
             {...props}
             sx={{
-                width: "300px",
+                width: "350px",
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                backgroundColor: "#f2f2f2",
-
+                backgroundColor: "backgroundGrey",
             }}
-        >
-
-        </div>
+        />
     )
 }
 

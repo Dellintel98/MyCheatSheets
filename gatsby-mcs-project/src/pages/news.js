@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Layout from "../components/layout"
-import SideBar from "../components/sidebar"
+import SideBar from "../components/sidebar/sidebar"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
 

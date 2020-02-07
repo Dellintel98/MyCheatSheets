@@ -1,18 +1,22 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-const Card = props => {
+const SidebarCard = props => {
     return (
         <div
             {...props}
             sx={{
-
-                height: "flex",
+                mx: 3,
+                marginTop: 1,
+                width: "92%",
+                height: "30%",
+                overflow: "hidden",
                 display: "flex",
-
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "left",
             }}
         />
-
     )
 }
-export default Card
+export default SidebarCard
