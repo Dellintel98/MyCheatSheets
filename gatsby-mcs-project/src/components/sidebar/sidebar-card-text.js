@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-// import {useRef, useEffect} from "react"
+import {useRef, useEffect} from "react"
 
 // const chunkString = (str, length) => {
 //     return str.match(new RegExp('.{1,' + length + '}', 'g'));
@@ -26,21 +26,33 @@ import { jsx } from "theme-ui"
 //     }
 
 const SidebarCardText = props => {
+    let alignText = "left";
+    let leftMargin = 4;
+    let leftPadding = 3;
+    const cardTextLength = props.children.length;
+
+    if(cardTextLength < 20){
+        alignText = "center";
+        leftMargin = 0;
+        leftPadding = 0;
+    }
+
     return (
         <p
             {...props}
             sx={{
+                //backgroundColor: "green",
                 fontSize: 1,
                 fontWeight: "body",
-                px: 2,
-                //margin: "auto",
-                //textAlign: "left",
-                display: "flex",
-                justifyContent: "left",
+                paddingLeft: leftPadding,
+                my: "auto",
+                marginLeft: leftMargin,
+                width: "100%",
+                textAlign: alignText,
                 lineHeight: 1.2,
-                //whiteSpace: "wrap",
-                //overflow: "hidden",
-                //textOverflow: "ellipsis",
+                whiteSpace: "wrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
                 color: "black",
             }}
         />

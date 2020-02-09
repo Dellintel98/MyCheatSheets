@@ -15,7 +15,7 @@ const SideBarForum = () => {
         <SideBar
             sx={{
                 height: "100%",
-                justifyContent: "space-between"
+                justifyContent: "top",
             }}
         >
             <SideBarContainer>
@@ -23,13 +23,13 @@ const SideBarForum = () => {
                 <SidebarCard>
                     <SideBarIcon iconSrc={questionIcon} />
                     <SidebarCardText>
-                        Question no. 1 jdshfias ioasjoa oj foiajf ofvjaspfo asdasd addaad asd?
+                        Question no. 1 jdshfias ioa sjo aoj foiajf ofvjaspfo as...
                     </SidebarCardText>
                 </SidebarCard>
                 <SidebarCard>
                     <SideBarIcon iconSrc={questionIcon} />
                     <SidebarCardText>
-                        Questionaa no.1jdshfiasioasjoa
+                        Questionaa no.1jdshf iasi oasjoa
                     </SidebarCardText>
                 </SidebarCard>
 
@@ -41,33 +41,23 @@ const SideBarForum = () => {
                 </SidebarCard>
             </SideBarContainer>
 
-            <SideBarContainer
-                sx={{
-                    borderTop: "1px solid",
-                    borderColor: "iconGrey"
-                }}
-            >
+            <SideBarContainer>
                 <Title>Latest news</Title>
                 <SidebarCard>
                     <SideBarIcon iconSrc={articleIcon} />
-                    <SidebarCardText>News1</SidebarCardText>
+                    <SidebarCardText>These are News1</SidebarCardText>
                 </SidebarCard>
                 <SidebarCard>
                     <SideBarIcon iconSrc={articleIcon} />
-                    <SidebarCardText>News2</SidebarCardText>
+                    <SidebarCardText>These are News2</SidebarCardText>
                 </SidebarCard>
                 <SidebarCard>
                     <SideBarIcon iconSrc={articleIcon} />
-                    <SidebarCardText>News3</SidebarCardText>
+                    <SidebarCardText>These are News3</SidebarCardText>
                 </SidebarCard>
             </SideBarContainer>
 
-            <SideBarContainer
-                sx={{
-                    borderTop: "1px solid",
-                    borderColor: "iconGrey"
-                }}
-            >
+            <SideBarContainer>
                 <Title>Top sheets</Title>
                 <SidebarCard>
                     <SideBarIcon iconSrc={sheetIcon} />
