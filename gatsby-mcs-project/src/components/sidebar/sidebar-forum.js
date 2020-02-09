@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import SideBar from "../sidebar/sidebar"
-import Card from "../sidebar/sidebar-card"
+import SidebarCard from "../sidebar/sidebar-card"
+import SidebarCardText from "../sidebar/sidebar-card-text"
 import SideBarContainer from "../sidebar/sidebar-container"
 import SideBarIcon from "../sidebar/sidebar-icon"
 import questionIcon from "../../images/question-icon.png"
@@ -11,73 +12,67 @@ import Title from "../sidebar/sidebar-title"
 
 const SideBarForum = () => {
     return (
-        <div
+        <SideBar
             sx={{
                 height: "100%",
+                justifyContent: "top",
             }}
         >
+            <SideBarContainer>
+                <Title>Popular questions</Title>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={questionIcon} />
+                    <SidebarCardText>
+                        Question no. 1 jdshfias ioa sjo aoj foiajf ofvjaspfo as...
+                    </SidebarCardText>
+                </SidebarCard>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={questionIcon} />
+                    <SidebarCardText>
+                        Questionaa no.1jdshf iasi oasjoa
+                    </SidebarCardText>
+                </SidebarCard>
 
-            <SideBar
-                sx={{
-                    justifyContent: "space-between"
-                }}
-            >
-
-                <SideBarContainer>
-                    <Title>Popular questions</Title>
-                    <Card>
-                        <SideBarIcon iconSrc={questionIcon} />
+                <SidebarCard>
+                    <SideBarIcon iconSrc={questionIcon} />
+                    <SidebarCardText>
                         Question no. 1 jdshfias ioasjoa ojfoiajf ofvjaspfo ?
-                    </Card>
-                    <Card>
-                        <SideBarIcon iconSrc={questionIcon} />
-                        Question no. 2 sdijsahd akjd jafoia incob  aosinfoihn?
-                    </Card>
+                    </SidebarCardText>
+                </SidebarCard>
+            </SideBarContainer>
 
-                    <Card>
-                        <SideBarIcon iconSrc={questionIcon} />
-                        Question no. 3 fshaof oiasfjoa oisfj osfnolvdciodnifn n ifos?
-                    </Card>
-                    <hr></hr>
-                </SideBarContainer>
+            <SideBarContainer>
+                <Title>Latest news</Title>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={articleIcon} />
+                    <SidebarCardText>These are News1</SidebarCardText>
+                </SidebarCard>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={articleIcon} />
+                    <SidebarCardText>These are News2</SidebarCardText>
+                </SidebarCard>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={articleIcon} />
+                    <SidebarCardText>These are News3</SidebarCardText>
+                </SidebarCard>
+            </SideBarContainer>
 
-
-                <SideBarContainer>
-                    Latest news
-                    <Card>
-                        <SideBarIcon iconSrc={articleIcon} />
-                        News1
-                    </Card>
-                    <Card>
-                        <SideBarIcon iconSrc={articleIcon} />
-                        News2
-                    </Card>
-                    <Card>
-                        <SideBarIcon iconSrc={articleIcon} />
-                        News3
-                    </Card>
-                    <hr>
-                    </hr>
-                </SideBarContainer>
-
-                <SideBarContainer>
-                    Top sheets
-                    <Card>
-                        <SideBarIcon iconSrc={sheetIcon} />
-                        JS cheet sheet
-                    </Card>
-                    <Card>
-                        <SideBarIcon iconSrc={sheetIcon} />
-                        JS cheet sheet
-                    </Card>
-                    <Card>
-                        <SideBarIcon iconSrc={sheetIcon} />
-                        JS cheet sheet
-                    </Card>
-
-                </SideBarContainer>
-            </SideBar>
-        </div>
+            <SideBarContainer>
+                <Title>Top sheets</Title>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={sheetIcon} />
+                    <SidebarCardText>JS cheet sheet</SidebarCardText>
+                </SidebarCard>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={sheetIcon} />
+                    <SidebarCardText>JS cheet sheet</SidebarCardText>
+                </SidebarCard>
+                <SidebarCard>
+                    <SideBarIcon iconSrc={sheetIcon} />
+                    <SidebarCardText>JS cheet sheet</SidebarCardText>
+                </SidebarCard>
+            </SideBarContainer>
+        </SideBar>
     )
 }
 

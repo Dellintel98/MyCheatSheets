@@ -9,7 +9,6 @@ const Container = props => {
                 width: "100%",
                 maxWidth: "screenWidth",
                 margin: "0 auto",
-                px: [3, 1],
             }}
         />
     )

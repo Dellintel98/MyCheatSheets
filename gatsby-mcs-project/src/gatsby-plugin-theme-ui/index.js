@@ -4,10 +4,13 @@ const theme = {
     ...roboto,
     sizes: {
         ...roboto.sizes,
-        navLogo: "48px",
+        navLogo: "36px",
+        navTitle: "24px",
         screenWidth: "100vw",
+        screenHeight: "100vh",
         navContainerWidth: "80%",
-        navContainerHeight: "50px",
+        navContainerHeight: "44px",
+        navLinksHeight: "38px",
         siteContainer: "60%",
     },
     colors: {
@@ -19,9 +22,13 @@ const theme = {
         accent: "#dd270f", // Color for emphasizing UI elements, e.g. delete button
         accentHover: "#a11d0b", // Color for hover state of accented elements
         muted: roboto.colors.muted, // Grey color for decorative purposes, e.g. button's shadow
-        codeBackground: "#e5e5e5", // Background color for code container
-        grey: ["#f2f2f2", "#c4c4c4", "#acacac"], // Grey colors for elements
-        highlight: ["#bfd3df", "#77a1ba"], // Colors for input field highlight
+        codeBackground: "#e5e5e5", // Grey background color for code container
+        backgroundGrey: "#f2f2f2", // Grey background color for sidebar or other elements, e.g. search input highlighted
+        alternateGrey: "#fafafa", // Grey color for use as background color for components
+        iconGrey: "#acacac", // Grey color for use in icons
+        scrollBarGrey: "#c4c4c4", // Grey background color for scrollbar
+        highlight1: "#bfd3df", // Highlight color for input field
+        highlight2: "#77a1ba", // Highlight color for input field
         alternate: "#5d73b0", // Alternate color for regular buttons
         alternateHover: "#333f60", // Hover color for alternate
         slogan: "#232325", //Color for slogan on index page

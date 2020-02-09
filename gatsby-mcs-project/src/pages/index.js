@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Layout from "../components/layout"
-import SideBar from "../components/sidebar"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
 
@@ -11,7 +10,6 @@ const IndexPage = () => (
             <BodyContent>
                 <h1>My Cheat Sheets</h1>
             </BodyContent>
-            <SideBar />
         </Body>
     </Layout>
 )

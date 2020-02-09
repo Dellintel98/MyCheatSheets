@@ -7,11 +7,14 @@ const SideBarContainer = props => {
         <Container
             {...props}
             sx={{
-                maxWidth: "80%",
-                height: "33%",
+                //backgroundColor: "tomato",
+                width: "100%",
+                height: "30%",
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between"
+                flexDirection: "column",
+                alignItems: "left",
+                justifyContent: "top",
+                paddingBottom: 3,
             }}
         />
     )
