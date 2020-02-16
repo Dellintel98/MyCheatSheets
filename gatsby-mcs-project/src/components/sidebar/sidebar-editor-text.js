@@ -2,15 +2,11 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import SideBar from "../sidebar/sidebar"
-import Card from "../card"
 import SideBarContainer from "../sidebar/sidebar-container"
 import Subtitle from "../sidebar/sidebar-subtitle"
 import Title from "../sidebar/sidebar-title"
 import Button from "../button"
 import Label from "../label"
-
-
-
 
 
 const SideBarEditor = () => {
