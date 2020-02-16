@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Link } from "gatsby"
 
-const SidebarCard = props => {
+
+const Card = props => {
     return (
-        <Link
-            to="/forum/"
+        <div
             {...props}
             sx={{
                 //backgroundColor: "orange",
@@ -20,12 +19,6 @@ const SidebarCard = props => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "left",
-                '&:hover': {
-                    cursor: "pointer",
-                },
-                '&:active': {
-                    backgroundColor: "iconGrey",
-                },
                 userSelect: "none", /* supported by Chrome and Opera */
                 webkitUserSelect: "none", /* Safari */
                 khtmlUserSelect: "none", /* Konqueror HTML */
@@ -35,4 +28,4 @@ const SidebarCard = props => {
         />
     )
 }
-export default SidebarCard
+export default Card
