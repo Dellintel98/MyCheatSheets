@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { Link } from "gatsby"
 import {jsx} from "theme-ui"
+import { Link } from "gatsby"
 
-const LogInOutCard = () => {
+const NavLink = props => {
     return (
-        <Link 
-            to='/'
+        <Link
+            {...props}
             sx={{
                 mx: 1,
                 px: 2,
@@ -15,19 +15,16 @@ const LogInOutCard = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                borderBottom: "3px solid white",
+                borderBottom: "3px solid",
+                borderBottomColor: "white",
                 color: "primary",
-                text: "body",
                 '&:hover': {
                     bg: 'backgroundGrey',
-                    borderBottomColor: 'backgroundGrey',
-                    color: "alternate",
+                    borderBottomColor: 'primary',
                   }
             }}
-        >
-            Log in
-        </Link>
+        />
     )
 }
 
-export default LogInOutCard
+export default NavLink

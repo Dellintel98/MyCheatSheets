@@ -7,7 +7,8 @@ import navLogoTitle from "../images/navigation-title.png"
 
 import NavContainer from "./navigationScripts/nav-container"
 import Container from "./container"
-import SearchBar from "./search-bar"
+import NavLinks from "./navigationScripts/navigation-links"
+//import SearchBar from "./search-bar"
 import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
 import LogInOutCard from "./navigationScripts/log-in-out-card"
 import HiddenMenu from "./navigationScripts/hidden-menu"
@@ -39,48 +40,6 @@ const LogoLink = () => {
     )
 }
 
-const NavLink = prop => {
-    return (
-        <Link
-            {...prop}
-            sx={{
-                mx: 1,
-                px: 2,
-                paddingTop: "3px",
-                minWidth: "auto",
-                minHeight: "navLinksHeight",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                borderBottom: "3px solid white",
-                color: "primary",
-                '&:hover': {
-                    bg: 'backgroundGrey',
-                    borderBottomColor: 'primary',
-                  }
-            }}
-        />
-    )
-}
-
-const NavLinks = ({ menuItems }) => {
-    return (
-        <nav
-            sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-            }}
-        >
-            {menuItems.map(({ link, text }) => (
-                <NavLink key={text} to={link}>
-                    {text}
-                </NavLink>
-            ))}
-        </nav>
-    )
-}
-
 const NavBar = ({ menuItems }) => {
     return (
         <NavContainer
@@ -94,13 +53,14 @@ const NavBar = ({ menuItems }) => {
             <NavLinks menuItems={menuItems} />
             <NavigationSearchBar />
             <LogInOutCard />
-            <HiddenMenu />
+            <HiddenMenu menuItems={menuItems} />
         </NavContainer>
     )
 }
 
 
 const Navigation = ({ menuItems }) => {
+    console.debug(`current url:`);
 
     return (
         <Header
