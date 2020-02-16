@@ -2,7 +2,14 @@
 import {jsx} from "theme-ui"
 import { Link } from "gatsby"
 
-const NavLink = props => {
+const NavLink = ({isCurrentPage, ...props}) => {
+    let borderColor;
+    if(isCurrentPage){
+        borderColor = "primary";
+    } else {
+        borderColor = "white";
+    }
+
     return (
         <Link
             {...props}
@@ -16,7 +23,7 @@ const NavLink = props => {
                 alignItems: "center",
                 justifyContent: "center",
                 borderBottom: "3px solid",
-                borderBottomColor: "white",
+                borderBottomColor: borderColor,
                 color: "primary",
                 '&:hover': {
                     bg: 'backgroundGrey',

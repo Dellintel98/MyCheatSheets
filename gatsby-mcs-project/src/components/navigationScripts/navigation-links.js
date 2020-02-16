@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import {jsx} from "theme-ui"
-import React from "react"
+import { globalHistory as history } from "@reach/router"
 import NavLink from "./navigation-link"
 
 const NavLinks = ({ menuItems }) => {
+    const { location } = history;
+
     return (
         <nav
             sx={{
@@ -13,7 +15,7 @@ const NavLinks = ({ menuItems }) => {
             }}
         >
             {menuItems.map(({ link, text }) => (
-                <NavLink key={text} to={link}>
+                <NavLink key={text} to={link} isCurrentPage={location.pathname === link} >
                     {text}
                 </NavLink>
             ))}

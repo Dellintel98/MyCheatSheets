@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import {jsx} from "theme-ui"
+import { globalHistory as history } from "@reach/router"
 import MenuLink from "./hidden-menu-link"
 
 const MenuContent = ({menuItems}) => {
+    const { location } = history;
+
     return(
         <nav
             sx={{
@@ -21,7 +24,7 @@ const MenuContent = ({menuItems}) => {
             }}
         >
             {menuItems.map(({ link, text }) => (
-                <MenuLink key={text} to={link}>
+                <MenuLink key={text} to={link} isCurrentPage={location.pathname === link} >
                     {text}
                 </MenuLink>
             ))}

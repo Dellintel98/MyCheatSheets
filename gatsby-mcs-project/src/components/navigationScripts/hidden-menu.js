@@ -30,7 +30,7 @@ const HiddenMenu = ({menuItems}) => {
                 },
                 '&:hover svg': {
                     color: "alternate",
-                }
+                },
             }}
         >
             <MenuIcon isVisible={true} />

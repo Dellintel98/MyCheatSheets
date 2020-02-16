@@ -2,10 +2,18 @@
 import {jsx} from "theme-ui"
 import NavLink from "./navigation-link"
 
-const MenuLink = props => {
+const MenuLink = ({isCurrentPage, ...props}) => {
+    let borderColor;
+    if(isCurrentPage){
+        borderColor = "primary";
+    } else {
+        borderColor = "white";
+    }
+
     return(
         <NavLink 
             {...props}
+            isCurrentPage={false}
             sx={{
                 mx: 0,
                 paddingLeft: 4,
@@ -17,7 +25,7 @@ const MenuLink = props => {
                 alignItems: "center",
                 justifyContent: "left",
                 borderLeft: "3px solid",
-                borderLeftColor: "white",
+                borderLeftColor: borderColor,
                 borderBottom: 0,
                 color: "primary",
                 '&:hover': {
