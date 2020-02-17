@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import {useRef, useEffect} from "react"
+import { useRef, useEffect } from "react"
 
 // const chunkString = (str, length) => {
 //     return str.match(new RegExp('.{1,' + length + '}', 'g'));
@@ -31,7 +31,7 @@ const SidebarCardText = props => {
     let leftPadding = 3;
     const cardTextLength = props.children.length;
 
-    if(cardTextLength < 20){
+    if (cardTextLength < 20) {
         alignText = "center";
         leftMargin = 0;
         leftPadding = 0;

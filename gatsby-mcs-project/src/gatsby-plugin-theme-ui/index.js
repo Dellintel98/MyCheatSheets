@@ -38,6 +38,21 @@ const theme = {
         body: 300,
         heading: 400,
         bold: 400,
+        subtitle: 200,
+    },
+    buttons: {
+        primary: {
+            color: '#fff',
+            bg: 'primary',
+        },
+        secondary: {
+            color: '#fff',
+            bg: 'accent',
+        },
+        regular: {
+            color: 'primary',
+            bg: 'white',
+        },
     },
     styles: {
         h1: {

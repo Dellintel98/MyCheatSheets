@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import { jsx } from "theme-ui"
 
 const Container = props => {
     return (
-        <div 
+        <div
             {...props}
             sx={{
                 width: "100%",
