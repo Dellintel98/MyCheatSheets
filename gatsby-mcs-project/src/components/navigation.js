@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx, Header } from "theme-ui"
 import { Link } from "gatsby"
+import useWindowDimensions from "../hooks/get-screen-width"
+import calculateResponsivity from "../hooks/responsive-navigation"
 
 import navLogoImg from "../images/main-logo.png"
 import navLogoTitle from "../images/navigation-title.png"
@@ -8,7 +10,7 @@ import navLogoTitle from "../images/navigation-title.png"
 import NavContainer from "./navigationScripts/nav-container"
 import Container from "./container"
 import NavLinks from "./navigationScripts/navigation-links"
-//import SearchBar from "./search-bar"
+
 import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
 import LogInOutCard from "./navigationScripts/log-in-out-card"
 import HiddenMenu from "./navigationScripts/hidden-menu"
@@ -41,6 +43,16 @@ const LogoLink = () => {
 }
 
 const NavBar = ({ menuItems }) => {
+    let hiddenMenuVisible = false;
+    let windowWidth = useWindowDimensions();
+    const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
+
+    if(windowWidth < 1250) {
+        hiddenMenuVisible = true;
+    } else {
+        hiddenMenuVisible = false;
+    }
+
     return (
         <NavContainer
             sx={{
@@ -50,18 +62,16 @@ const NavBar = ({ menuItems }) => {
                 width: "auto",
             }}
         >
-            <NavLinks menuItems={menuItems} />
+            <NavLinks menuItems={navigationItems} />
             <NavigationSearchBar />
             <LogInOutCard />
-            <HiddenMenu menuItems={menuItems} />
+            {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} />}
         </NavContainer>
     )
 }
 
 
 const Navigation = ({ menuItems }) => {
-    console.debug(`current url:`);
-
     return (
         <Header
             sx={{

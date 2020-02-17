@@ -14,22 +14,23 @@ const SearchIcon = ({iconHeight}) => {
                     display: "block",
                     cursor: "pointer",
                     margin: 0,
-                    marginRight: 1,
+                    py: "3px",
+                    px: "4px",
+                    borderRadius: "0 4px 4px 0",
                     height: iconHeight,
                     width: "auto",
-                    color: "alternate",
-                    //backgroundColor: "black",
+                    color: "alternateHover",
+                    '&:active': {
+                        color: "alternate",
+                        backgroundColor: "backgroundGrey",
+                    },
                     userSelect: "none", /* supported by Chrome and Opera */
                     webkitUserSelect: "none", /* Safari */
                     khtmlUserSelect: "none", /* Konqueror HTML */
                     mozUserSelect: "none", /* Firefox */
                     msUserSelect: "none", /* Internet Explorer/Edge */
                 }}>
-                    <path 
-                        fill-rule="evenodd" 
-                        clip-rule="evenodd" 
-                        d="M82.3163 73.1239C95.6777 55.3021 94.2543 29.9076 78.0459 13.6992C60.2771 -4.06965 31.4681 -4.06966 13.6992 13.6992C-4.06965 31.4681 -4.06965 60.2771 13.6992 78.0459C30.1517 94.4985 56.0693 95.7173 73.9242 81.7023L119.412 127.19L127.897 118.705L82.3163 73.1239ZM70.9748 20.7703C84.8385 34.6339 84.8385 57.1112 70.9748 70.9748C57.1112 84.8385 34.6339 84.8385 20.7703 70.9748C6.90666 57.1112 6.90666 34.6339 20.7703 20.7703C34.6339 6.90665 57.1112 6.90666 70.9748 20.7703Z"
-                    />
+                    <path d="M82.3163 73.1239C95.6777 55.3021 94.2543 29.9076 78.0459 13.6992C60.2771 -4.06965 31.4681 -4.06966 13.6992 13.6992C-4.06965 31.4681 -4.06965 60.2771 13.6992 78.0459C30.1517 94.4985 56.0693 95.7173 73.9242 81.7023L119.412 127.19L127.897 118.705L82.3163 73.1239ZM70.9748 20.7703C84.8385 34.6339 84.8385 57.1112 70.9748 70.9748C57.1112 84.8385 34.6339 84.8385 20.7703 70.9748C6.90666 57.1112 6.90666 34.6339 20.7703 20.7703C34.6339 6.90665 57.1112 6.90666 70.9748 20.7703Z" />
             </svg>
         </div>
     )

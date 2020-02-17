@@ -7,7 +7,7 @@ const LogInOutCard = () => {
         <Link 
             to='/'
             sx={{
-                mx: 1,
+                marginLeft: 1,
                 px: 2,
                 paddingTop: "3px",
                 minWidth: "auto",
@@ -22,7 +22,12 @@ const LogInOutCard = () => {
                     bg: 'backgroundGrey',
                     borderBottomColor: 'backgroundGrey',
                     color: "alternate",
-                  }
+                },
+                userSelect: "none", /* supported by Chrome and Opera */
+                webkitUserSelect: "none", /* Safari */
+                khtmlUserSelect: "none", /* Konqueror HTML */
+                mozUserSelect: "none", /* Firefox */
+                msUserSelect: "none", /* Internet Explorer/Edge */
             }}
         >
             Log in

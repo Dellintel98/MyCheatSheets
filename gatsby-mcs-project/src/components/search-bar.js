@@ -6,37 +6,34 @@ const SearchBar = () => {
     return (
         <div
             sx={{
+                overflow: "hidden",
                 mx: 2,
                 minWidth: "180px",
-                height: "25px",
+                height: "23px",
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                //backgroundColor: "yellow",
+                backgroundColor: "background",
                 border: "solid",
                 borderWidth: "1px",
                 borderRadius: "4px",
                 borderColor: "primary",
-                "&:focus": {
+                '&:focus-within': {
                     backgroundColor: "backgroundGrey",
-                },
+                }
             }}
         >
             <input
-                type="search"
+                type="text"
                 placeholder="Search..."
-                //autoFocus={true}
                 sx={{
-                    width: "150px",
+                    width: "155px",
                     py: 1,
                     paddingLeft: 3,
-                    //mx: 2,
                     my: 1,
                     overflow: "hidden",
-                    //borderWidth: "1px",
-                    borderRadius: "4px",
-                    //borderColor: "primary",
+                    borderRadius: "4px 0 0 4px",
                     border: "none",
                     color: "secondary",
                     font: "roboto",
@@ -44,6 +41,7 @@ const SearchBar = () => {
                     fontWeight: 300,
                     lineHeight: 1.125,
                     backgroundColor: "background",
+                    //backgroundColor: "green",
                     "&:focus": {
                         outline: "none",
                         backgroundColor: "backgroundGrey",

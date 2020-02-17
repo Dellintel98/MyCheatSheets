@@ -9,6 +9,7 @@ const HiddenMenu = ({menuItems}) => {
             sx={{
                 cursor: "pointer",
                 mx: 0,
+                marginLeft: 1,
                 px: 3,
                 paddingTop: "3px",
                 minWidth: "auto",
@@ -33,7 +34,7 @@ const HiddenMenu = ({menuItems}) => {
                 },
             }}
         >
-            <MenuIcon isVisible={true} />
+            <MenuIcon />
             <MenuContent menuItems={menuItems} />
         </div>
     )
