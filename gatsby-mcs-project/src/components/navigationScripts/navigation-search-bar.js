@@ -6,8 +6,7 @@ const NavigationSearchBar = () => {
     return (
         <div
             sx={{
-                height: "navLinksHeight",
-                //backgroundColor: "black",
+                height: "100%",
                 display: "flex",
                 alignItems: "center",
             }}
