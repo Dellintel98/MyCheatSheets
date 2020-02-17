@@ -1,16 +1,20 @@
 /** @jsx jsx */
 import { jsx, Header } from "theme-ui"
 import { Link } from "gatsby"
+import useWindowDimensions from "../hooks/get-screen-width"
+import calculateResponsivity from "../hooks/responsive-navigation"
 
 import navLogoImg from "../images/main-logo.png"
 import navLogoTitle from "../images/navigation-title.png"
 
 import NavContainer from "./navigationScripts/nav-container"
 import Container from "./container"
-import SearchBar from "./search-bar"
+import NavLinks from "./navigationScripts/navigation-links"
+
 import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
 import LogInOutCard from "./navigationScripts/log-in-out-card"
 import HiddenMenu from "./navigationScripts/hidden-menu"
+import { useState } from "react"
 
 const LogoLink = () => {
     return (
@@ -39,49 +43,23 @@ const LogoLink = () => {
     )
 }
 
-const NavLink = prop => {
-    return (
-        <Link
-            {...prop}
-            sx={{
-                mx: 1,
-                px: 2,
-                paddingTop: "3px",
-                minWidth: "auto",
-                minHeight: "navLinksHeight",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                borderBottom: "3px solid white",
-                color: "primary",
-                '&:hover': {
-                    bg: 'backgroundGrey',
-                    borderBottomColor: 'primary',
-                  }
-            }}
-        />
-    )
-}
-
-const NavLinks = ({ menuItems }) => {
-    return (
-        <nav
-            sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-            }}
-        >
-            {menuItems.map(({ link, text }) => (
-                <NavLink key={text} to={link}>
-                    {text}
-                </NavLink>
-            ))}
-        </nav>
-    )
-}
-
 const NavBar = ({ menuItems }) => {
+    //const [counter, setCount] = useState(0);
+    let hiddenMenuVisible = false;
+    let windowWidth = useWindowDimensions();
+    const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
+
+    if(windowWidth < 1250) {
+        hiddenMenuVisible = true;
+    } else {
+        hiddenMenuVisible = false;
+    }
+
+    function handleLogInClick() {
+        //setCount(counter + 1);
+        console.log("Do you want to log in?");
+    }
+
     return (
         <NavContainer
             sx={{
@@ -91,17 +69,16 @@ const NavBar = ({ menuItems }) => {
                 width: "auto",
             }}
         >
-            <NavLinks menuItems={menuItems} />
+            <NavLinks menuItems={navigationItems} />
             <NavigationSearchBar />
-            <LogInOutCard />
-            <HiddenMenu />
+            <LogInOutCard onClick={handleLogInClick()} />
+            {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} />}
         </NavContainer>
     )
 }
 
 
 const Navigation = ({ menuItems }) => {
-
     return (
         <Header
             sx={{

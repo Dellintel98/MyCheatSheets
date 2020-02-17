@@ -1,15 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 import { css } from "theme-ui"
 
 import Navigation from "./navigation"
 
-
-//isAdmin = true
-//style={isAdmin ? myStyles1 : myStyles2}
 
 const Layout = props => {
   const data = useStaticQuery(graphql`
@@ -28,7 +24,7 @@ const Layout = props => {
   const {siteMetadata: {menuItems}} = data.site
 
   return (
-    <>
+    <div>
       <Global 
         styles={css({
           "*": {
@@ -61,7 +57,7 @@ const Layout = props => {
         <Navigation menuItems={menuItems} />
         {props.children}
       </div>
-    </>
+    </div>
   )
 }
 

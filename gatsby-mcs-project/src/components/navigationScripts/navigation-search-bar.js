@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import {jsx} from "theme-ui"
-import SearchBar from "../../components/search-bar"
+import SearchBar from "../search-bar"
 
 const NavigationSearchBar = () => {
     return (
         <div
             sx={{
-                height: "navLinksHeight",
+                height: "100%",
                 display: "flex",
                 alignItems: "center",
             }}
