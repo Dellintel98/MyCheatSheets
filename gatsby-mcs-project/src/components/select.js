@@ -5,19 +5,22 @@ const Select = ({
     variant = 'select',
     ...props
 }) =>
-    <forms
+    <select
         {...props}
         sx={{
+            position: "relative",
             bg: "white",
-            /* textAlign: 'center',
-             lineHeight: 'inherit',
-             textDecoration: 'none',
-             fontSize: '1',
-             fontWeight: 'subtitle',
-             width: '90%',
-             borderColor: "black",
-             border: 10,
-             borderRadius: 4,*/
+            textAlignLast: 'center',
+            textAlign: 'center',
+            msTextAlignLast: 'center',
+            mozTextAlignLast: 'center',
+            lineHeight: 'inherit',
+            fontSize: '2',
+            fontWeight: 'subtitle',
+            width: '90%',
+            borderColor: "black",
+            border: 10,
+            borderRadius: 4,
 
 
         }}

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const SidebarCard = props => {
     return (
         <Link
-            to="/forum/"
+            to="/sheet"
             {...props}
             sx={{
                 //backgroundColor: "orange",

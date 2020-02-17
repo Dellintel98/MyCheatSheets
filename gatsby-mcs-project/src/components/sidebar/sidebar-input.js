@@ -1,14 +1,17 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 
-const Label = ({
-    variant = 'label',
+const SideBarInput = ({
+    variant = 'input',
+    placeholder,
     ...props
 }) =>
     <input
         type="text"
+        placeholder={placeholder}
         sx={{
             bg: "white",
+            textcolor: "primary",
             textAlign: 'center',
             lineHeight: 'inherit',
             textDecoration: 'none',
@@ -21,4 +24,4 @@ const Label = ({
 
         }}
     />
-export default Label
+export default SideBarInput

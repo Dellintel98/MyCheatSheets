@@ -50,7 +50,7 @@ const theme = {
             bg: 'accent',
         },
         regular: {
-            color: '#fff',
+            color: 'primary',
             bg: 'white',
         },
     },

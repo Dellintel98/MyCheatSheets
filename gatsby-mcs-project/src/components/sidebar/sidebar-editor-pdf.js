@@ -6,7 +6,7 @@ import SideBarContainer from "../sidebar/sidebar-container"
 import Subtitle from "../sidebar/sidebar-subtitle"
 import Title from "../sidebar/sidebar-title"
 import Button from "../button"
-import Input from "../sidebar/sidebar-input"
+import Input from "./sidebar-input"
 import Select from "../select"
 
 
@@ -33,7 +33,7 @@ const SideBarEditor = () => {
                 <Input placeholder="Load Image... " />
                 <Subtitle>
                     Cheat sheet category*
-                </Subtitle>
+                    </Subtitle>
                 <Select>
                     <option value="" selected disabled hidden>Category</option>
                     <option>JavaScript</option>
@@ -49,7 +49,9 @@ const SideBarEditor = () => {
                 >
                     *Required
                     </div>
-
+                <Button variant="regular" sx={{
+                    marginTop: "3",
+                }}>Change Pdf</Button>
             </SideBarContainer>
 
             <SideBarContainer sx={{
