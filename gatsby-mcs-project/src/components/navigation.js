@@ -13,8 +13,10 @@ import NavLinks from "./navigationScripts/navigation-links"
 
 import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
 import LogInOutCard from "./navigationScripts/log-in-out-card"
+import LogInModal from "./login-modalbox/login-modalbox"
 import HiddenMenu from "./navigationScripts/hidden-menu"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import LoginModal from "./login-modalbox/login-modalbox"
 
 const LogoLink = () => {
     return (
@@ -43,8 +45,13 @@ const LogoLink = () => {
     )
 }
 
+/* function handleLogInClick(setCount, counter) {
+    setCount(counter + 1);
+    console.log("Do you want to log in?", counter);
+} */
+
 const NavBar = ({ menuItems }) => {
-    //const [counter, setCount] = useState(0);
+    const [count, setCount] = useState(0);
     let hiddenMenuVisible = false;
     let windowWidth = useWindowDimensions();
     const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
@@ -55,14 +62,10 @@ const NavBar = ({ menuItems }) => {
         hiddenMenuVisible = false;
     }
 
-    function handleLogInClick() {
-        //setCount(counter + 1);
-        console.log("Do you want to log in?");
-    }
-
     return (
         <NavContainer
             sx={{
+                position: "relative",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
@@ -71,7 +74,8 @@ const NavBar = ({ menuItems }) => {
         >
             <NavLinks menuItems={navigationItems} />
             <NavigationSearchBar />
-            <LogInOutCard onClick={handleLogInClick()} />
+            <LogInOutCard onClick={() => setCount(count + 1)}/>
+            <LoginModal />
             {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} />}
         </NavContainer>
     )
@@ -90,6 +94,7 @@ const Navigation = ({ menuItems }) => {
         >
             <Container
                 sx={{
+                    position: "relative",
                     display: "flex",
                     alignContent: "center",
                     justifyContent: "space-between",
