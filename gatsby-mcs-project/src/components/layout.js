@@ -50,6 +50,7 @@ const Layout = props => {
 
       <div
         sx={{
+          position: "relative",
           height: "screenHeight",
           overflow: "hidden",
         }}
