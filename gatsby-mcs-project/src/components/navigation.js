@@ -13,10 +13,9 @@ import NavLinks from "./navigationScripts/navigation-links"
 
 import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
 import LogInOutCard from "./navigationScripts/log-in-out-card"
-import LogInModal from "./login-modalbox/login-modalbox"
 import HiddenMenu from "./navigationScripts/hidden-menu"
-import { useState, useEffect } from "react"
-import LoginModal from "./login-modalbox/login-modalbox"
+// import { useState, useEffect } from "react"
+// import LoginModal from "./login-modalbox/login-modalbox"
 
 const LogoLink = () => {
     return (
@@ -45,13 +44,9 @@ const LogoLink = () => {
     )
 }
 
-/* function handleLogInClick(setCount, counter) {
-    setCount(counter + 1);
-    console.log("Do you want to log in?", counter);
-} */
 
 const NavBar = ({ menuItems }) => {
-    const [count, setCount] = useState(0);
+    // const [showLoginModal, setShowLoginModal] = useState(false);
     let hiddenMenuVisible = false;
     let windowWidth = useWindowDimensions();
     const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
@@ -61,6 +56,8 @@ const NavBar = ({ menuItems }) => {
     } else {
         hiddenMenuVisible = false;
     }
+
+    // const handleShow = () => setShowLoginModal(true);
 
     return (
         <NavContainer
@@ -74,8 +71,9 @@ const NavBar = ({ menuItems }) => {
         >
             <NavLinks menuItems={navigationItems} />
             <NavigationSearchBar />
-            <LogInOutCard onClick={() => setCount(count + 1)}/>
-            {/*<LoginModal />*/}
+            <LogInOutCard />
+            {/* <LogInOutCard onClick={handleShow}/> */}
+            {/* <LoginModal show={showLoginModal} /> */}
             {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} />}
         </NavContainer>
     )

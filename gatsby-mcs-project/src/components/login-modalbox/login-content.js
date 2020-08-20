@@ -12,6 +12,8 @@ const LoginContent = props => {
                 height: "80%",
                 backgroundColor: "background",
                 borderRadius: "0 0 10px 10px",
+                justifyContent: "center",
+                alignItems: "center",
             }}
         />
     )

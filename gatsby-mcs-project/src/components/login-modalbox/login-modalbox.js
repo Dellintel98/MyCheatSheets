@@ -3,6 +3,12 @@ import {jsx} from "theme-ui"
 import LoginHeader from "./login-header"
 import LoginTab from "./login-tab"
 import LoginContent from "./login-content"
+import LoginButton from "./login-button"
+
+import FacebookLogo from "../../images/facebook-round-color.svg"
+import LinkedInLogo from "../../images/linkedin-round-color.svg"
+import GitHubLogo from "../../images/github.svg"
+import GoogleLogo from "../../images/google-color.svg"
 
 const LoginModal = () => {
     return (
@@ -43,7 +49,10 @@ const LoginModal = () => {
                     <LoginTab isSelected={false} tabTitle="Log in" />
                 </LoginHeader>
                 <LoginContent>
-
+                    <LoginButton buttonImage={LinkedInLogo} buttonName="LinkedIn" />
+                    <LoginButton buttonImage={FacebookLogo} buttonName="Facebook" />
+                    <LoginButton buttonImage={GitHubLogo} buttonName="GiHub" />
+                    <LoginButton buttonImage={GoogleLogo} buttonName="Google" />
                 </LoginContent>
             </div>
         </div>
