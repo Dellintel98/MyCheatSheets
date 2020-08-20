@@ -75,7 +75,7 @@ const NavBar = ({ menuItems }) => {
             <NavLinks menuItems={navigationItems} />
             <NavigationSearchBar />
             <LogInOutCard onClick={() => setCount(count + 1)}/>
-            <LoginModal />
+            {/*<LoginModal />*/}
             {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} />}
         </NavContainer>
     )
