@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 import { css } from "theme-ui"
+import { useState } from "react"
 
 import Navigation from "./navigation"
 
@@ -21,7 +22,17 @@ const Layout = props => {
     }
   `)
 
-  const {siteMetadata: {menuItems}} = data.site
+  const {siteMetadata: {menuItems}} = data.site;
+  
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setUserLoggedIn(true);
+  }
+
+  const handleLogout = () => {
+    setUserLoggedIn(false);
+  }
 
   return (
     <div>
@@ -55,7 +66,7 @@ const Layout = props => {
           overflow: "hidden",
         }}
       >
-        <Navigation menuItems={menuItems} />
+        <Navigation menuItems={menuItems} isUserLoggedIn={userLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} />
         {props.children}
       </div>
     </div>

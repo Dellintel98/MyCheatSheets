@@ -4,13 +4,39 @@ import LoginHeader from "./login-header"
 import LoginTab from "./login-tab"
 import LoginContent from "./login-content"
 import LoginButton from "./login-button"
+import LoginText from "./login-text"
+import LoginContentContainer from "./login-content-container"
+import SignupUsernameInput from "./signup-input"
+import CloseButton from "../close-button"
 
 import FacebookLogo from "../../images/facebook-round-color.svg"
 import LinkedInLogo from "../../images/linkedin-round-color.svg"
 import GitHubLogo from "../../images/github.svg"
 import GoogleLogo from "../../images/google-color.svg"
+import CloseSvg from "../../images/close-round.svg"
+import { useState } from "react"
 
-const LoginModal = () => {
+const LoginModal = ({handleClosing, handleLogin}) => {
+    const [selectedTab, setSelectedTab] = useState(true);
+    const handleSelectionOfLogin = () => {
+        if(!selectedTab){
+            setSelectedTab(true);
+        }
+    }
+    const handleSelectionOfSignup = () => {
+        if(selectedTab){
+            setSelectedTab(false);
+        }
+    }
+
+    const modalText = selectedTab ? "Log in with" : "Sign up with";
+    const buttonDivHeight = selectedTab ? "50%" : "50%";
+
+    const handleLoginAndSignup = () => {
+        handleLogin();
+        handleClosing();
+    }
+
     return (
         <div
             sx={{
@@ -42,19 +68,40 @@ const LoginModal = () => {
                     marginTop: "7%",
                     borderRadius: 10,
                     backgroundColor: "background",
+                    zIndex: 4,
                 }}
             >
                 <LoginHeader>
-                    <LoginTab isSelected={true} tabTitle="Sign in" />
-                    <LoginTab isSelected={false} tabTitle="Log in" />
+                    <LoginTab isSelected={selectedTab} tabTitle="Log in" onclick={handleSelectionOfLogin} />
+                    <LoginTab isSelected={!selectedTab} tabTitle="Sign up" onclick={handleSelectionOfSignup} />
                 </LoginHeader>
                 <LoginContent>
-                    <LoginButton buttonImage={LinkedInLogo} buttonName="LinkedIn" />
-                    <LoginButton buttonImage={FacebookLogo} buttonName="Facebook" />
-                    <LoginButton buttonImage={GitHubLogo} buttonName="GiHub" />
-                    <LoginButton buttonImage={GoogleLogo} buttonName="Google" />
+                    <LoginText text={modalText} />
+                    {!selectedTab && <SignupUsernameInput placeholder="Username" inputwidth="100%" backgroundcolor="inherit" fontsize="3" />}
+                    <LoginContentContainer bgrcolor="inherit" divHeight={buttonDivHeight} >
+                        <LoginButton buttonImage={LinkedInLogo} buttonName="LinkedIn" onclick={handleLoginAndSignup} />
+                        <LoginButton buttonImage={FacebookLogo} buttonName="Facebook" onclick={handleLoginAndSignup} />
+                        <LoginButton buttonImage={GitHubLogo} buttonName="GiHub" onclick={handleLoginAndSignup} />
+                        <LoginButton buttonImage={GoogleLogo} buttonName="Google" onclick={handleLoginAndSignup} />
+                    </LoginContentContainer>
                 </LoginContent>
             </div>
+            <CloseButton 
+                buttonPosition="absolute"
+                buttonHeight="50px"
+                buttonWidth="auto"
+                buttonImage={CloseSvg}
+                buttonTop={3}
+                buttonRight={3}
+                divTop="0"
+                divRight="0"
+                divHeight="screenHeight"
+                divWidth="screenWidth"
+                alignButton="start"
+                justifyButton="end"
+                buttonMargin="10px"
+                onclick={handleClosing}
+            />
         </div>
     )
 }

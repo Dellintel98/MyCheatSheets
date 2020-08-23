@@ -14,6 +14,7 @@ const SideBar = props => {
                 flexDirection: "column",
                 alignItems: "center",
                 backgroundColor: "backgroundGrey",
+                font: "roboto",
             }}
         />
     )

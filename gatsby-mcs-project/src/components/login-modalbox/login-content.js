@@ -7,7 +7,7 @@ const LoginContent = props => {
             {...props}
             sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: "column",
                 width: "100%",
                 height: "80%",
                 backgroundColor: "background",

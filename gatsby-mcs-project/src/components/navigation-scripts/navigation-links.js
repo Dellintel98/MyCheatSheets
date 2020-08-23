@@ -3,7 +3,7 @@ import {jsx} from "theme-ui"
 import { globalHistory as history } from "@reach/router"
 import NavLink from "./navigation-link"
 
-const NavLinks = ({ menuItems }) => {
+const NavLinks = ({ menuItems, isUserLoggedIn }) => {
     const { location } = history;
 
     return (
@@ -15,6 +15,7 @@ const NavLinks = ({ menuItems }) => {
             }}
         >
             {menuItems.map(({ link, text }) => (
+                (!isUserLoggedIn && text === "My sheets") ? null :
                 <NavLink key={text} to={link} isCurrentPage={location.pathname === link} >
                     {text}
                 </NavLink>

@@ -1,16 +1,16 @@
 /** @jsx jsx */
+import { Link } from "gatsby"
 import {jsx} from "theme-ui"
-import MenuIcon from "./hidden-menu-icon"
-import MenuContent from "./hidden-menu-content"
 
-const HiddenMenu = ({menuItems}) => {
+const LogInOutCard = ({onclick, isUserLoggedIn}) => {
+    const logInOutText = (!isUserLoggedIn) ? "Log in" : "Log out";
+
     return (
-        <div
+        <div 
+            onClick={onclick}
             sx={{
-                cursor: "pointer",
-                mx: 0,
                 marginLeft: 1,
-                px: 3,
+                px: 2,
                 paddingTop: "3px",
                 minWidth: "auto",
                 minHeight: "navLinksHeight",
@@ -19,25 +19,23 @@ const HiddenMenu = ({menuItems}) => {
                 justifyContent: "center",
                 borderBottom: "3px solid white",
                 color: "primary",
-                ':focus': {
-                    //outline: '2px solid',
-                },
+                text: "body",
                 '&:hover': {
                     bg: 'backgroundGrey',
                     borderBottomColor: 'backgroundGrey',
-                },
-                '&:hover nav': {
-                    display: "flex",
-                },
-                '&:hover svg': {
                     color: "alternate",
+                    cursor: "pointer",
                 },
+                userSelect: "none", /* supported by Chrome and Opera */
+                webkitUserSelect: "none", /* Safari */
+                khtmlUserSelect: "none", /* Konqueror HTML */
+                mozUserSelect: "none", /* Firefox */
+                msUserSelect: "none", /* Internet Explorer/Edge */
             }}
         >
-            <MenuIcon />
-            <MenuContent menuItems={menuItems} />
+            {logInOutText}
         </div>
     )
 }
 
-export default HiddenMenu
+export default LogInOutCard

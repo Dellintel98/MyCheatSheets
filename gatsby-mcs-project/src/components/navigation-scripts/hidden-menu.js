@@ -1,14 +1,16 @@
 /** @jsx jsx */
-import { Link } from "gatsby"
 import {jsx} from "theme-ui"
+import MenuIcon from "./hidden-menu-icon"
+import MenuContent from "./hidden-menu-content"
 
-const LogInOutCard = () => {
+const HiddenMenu = ({menuItems, isUserLoggedIn}) => {
     return (
-        <Link 
-            to='/'
+        <div
             sx={{
+                cursor: "pointer",
+                mx: 0,
                 marginLeft: 1,
-                px: 2,
+                px: 3,
                 paddingTop: "3px",
                 minWidth: "auto",
                 minHeight: "navLinksHeight",
@@ -17,22 +19,25 @@ const LogInOutCard = () => {
                 justifyContent: "center",
                 borderBottom: "3px solid white",
                 color: "primary",
-                text: "body",
+                ':focus': {
+                    //outline: '2px solid',
+                },
                 '&:hover': {
                     bg: 'backgroundGrey',
                     borderBottomColor: 'backgroundGrey',
+                },
+                '&:hover nav': {
+                    display: "flex",
+                },
+                '&:hover svg': {
                     color: "alternate",
                 },
-                userSelect: "none", /* supported by Chrome and Opera */
-                webkitUserSelect: "none", /* Safari */
-                khtmlUserSelect: "none", /* Konqueror HTML */
-                mozUserSelect: "none", /* Firefox */
-                msUserSelect: "none", /* Internet Explorer/Edge */
             }}
         >
-            Log in
-        </Link>
+            <MenuIcon />
+            <MenuContent menuItems={menuItems} isUserLoggedIn={isUserLoggedIn} />
+        </div>
     )
 }
 
-export default LogInOutCard
+export default HiddenMenu
