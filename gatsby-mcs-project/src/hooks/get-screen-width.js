@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react"
 
 function getWindowWidth() {
-    const { innerWidth: width, innerHeight: height } = window;
+    if(typeof window !== `undefined`){
+        const { innerWidth, innerHeight } = window;
+        
+        return {
+            innerWidth,
+            innerHeight
+        };
+    } else {
+        const width = 1920;
+        const height = 1080;
 
-    return {
-        width,
-        height
-    };
+        return{
+            width,
+            height
+        };
+    }
 }
 
 export default function useWindowDimensions() {
@@ -15,12 +25,14 @@ export default function useWindowDimensions() {
     );
 
     useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowWidth());
-        }
+        if(typeof window !== `undefined`){
+            function handleResize() {
+                setWindowDimensions(getWindowWidth());
+            }
 
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+            window.addEventListener("resize", handleResize);
+            return () => window.removeEventListener("resize", handleResize);
+        }
     }, []);
 
     return windowDimensions.width;

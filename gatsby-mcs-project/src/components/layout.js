@@ -5,6 +5,7 @@ import { Global } from "@emotion/core"
 import { css } from "theme-ui"
 import { useState } from "react"
 
+import useGlobalState from "../hooks/global-state-storage"
 import Navigation from "./navigation"
 
 
@@ -24,14 +25,21 @@ const Layout = props => {
 
   const {siteMetadata: {menuItems}} = data.site;
   
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  // const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [globalState, globalActions] = useGlobalState();
+
+  const userLoggedIn = globalState.isUserLoggedIn;
 
   const handleLogin = () => {
-    setUserLoggedIn(true);
+    if(!userLoggedIn){
+      globalActions.setUserLoggedIn(true);
+    }
   }
 
   const handleLogout = () => {
-    setUserLoggedIn(false);
+    if(userLoggedIn){
+      globalActions.setUserLoggedIn(false);
+    }
   }
 
   return (

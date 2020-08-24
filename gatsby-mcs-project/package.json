@@ -27,7 +27,8 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "theme-ui": "^0.2.49"
+    "theme-ui": "^0.2.49",
+    "use-global-hook": "^0.2.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
