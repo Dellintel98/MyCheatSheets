@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import { Link } from "gatsby"
 import {jsx} from "theme-ui"
 
 const LogInOutCard = ({onclick, isUserLoggedIn}) => {

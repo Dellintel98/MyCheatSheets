@@ -3,10 +3,11 @@ import { jsx } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 import { css } from "theme-ui"
-import { useState } from "react"
 
 import useGlobalState from "../hooks/global-state-storage"
+import useWindowDimensions from "../hooks/get-screen-width"
 import Navigation from "./navigation"
+import Footer from "./footer"
 
 
 const Layout = props => {
@@ -42,6 +43,8 @@ const Layout = props => {
     }
   }
 
+  const windowWidth = useWindowDimensions();
+
   return (
     <div>
       <Global 
@@ -67,6 +70,7 @@ const Layout = props => {
         })}
       />
 
+      {(windowWidth > 230) ?
       <div
         sx={{
           position: "relative",
@@ -74,9 +78,10 @@ const Layout = props => {
           overflow: "hidden",
         }}
       >
-        <Navigation menuItems={menuItems} isUserLoggedIn={userLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} />
+        <Navigation menuItems={menuItems} isUserLoggedIn={userLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} windowWidth={windowWidth} />
         {props.children}
-      </div>
+        <Footer />
+      </div> : null}
     </div>
   )
 }

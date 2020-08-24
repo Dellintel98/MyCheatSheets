@@ -2,7 +2,9 @@
 import {jsx} from "theme-ui"
 import SearchBar from "../search-bar"
 
-const NavigationSearchBar = () => {
+const NavigationSearchBar = ({windowWidth}) => {
+    const isWindowWideEnough = (windowWidth > 425) ? true : false;
+
     return (
         <div
             sx={{
@@ -11,7 +13,8 @@ const NavigationSearchBar = () => {
                 alignItems: "center",
             }}
         >
-            <SearchBar />
+            {isWindowWideEnough && <SearchBar />}
+            {/* Na kraju izrade dodati ovdje modal search bar koji se pojavljuje na pritisak povecala, ako se odlucim na to */}
         </div>
     )
 }

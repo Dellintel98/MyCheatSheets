@@ -12,6 +12,11 @@ const NavLinks = ({ menuItems, isUserLoggedIn }) => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
+                userSelect: "none", /* supported by Chrome and Opera */
+                webkitUserSelect: "none", /* Safari */
+                khtmlUserSelect: "none", /* Konqueror HTML */
+                mozUserSelect: "none", /* Firefox */
+                msUserSelect: "none", /* Internet Explorer/Edge */
             }}
         >
             {menuItems.map(({ link, text }) => (

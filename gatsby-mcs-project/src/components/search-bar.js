@@ -6,6 +6,7 @@ const SearchBar = () => {
     return (
         <div
             sx={{
+                position: "relative",
                 overflow: "hidden",
                 mx: 2,
                 minWidth: "180px",

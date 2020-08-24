@@ -6,7 +6,7 @@ import BodyContent from "../components/body-content"
 import SideBarEditorPdf from "../components/sidebar/sidebar-editor-pdf"
 import SideBarEditorText from "../components/sidebar/sidebar-editor-text"
 import SideBarEditorImage from "../components/sidebar/sidebar-editor-image"
-import SideBarEditor from "../components/sidebar/sidebar-editor-pdf"
+// import SideBarEditor from "../components/sidebar/sidebar-editor-pdf"
 
 function CheckEditorType(editorType) {
     if (editorType === "pdf") {

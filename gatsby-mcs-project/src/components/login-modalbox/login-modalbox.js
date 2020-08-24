@@ -16,7 +16,7 @@ import GoogleLogo from "../../images/google-color.svg"
 import CloseSvg from "../../images/close-round.svg"
 import { useState } from "react"
 
-const LoginModal = ({handleClosing, handleLogin}) => {
+const LoginModal = ({handleClosing, handleLogin, windowWidth}) => {
     const [selectedTab, setSelectedTab] = useState(true);
     const handleSelectionOfLogin = () => {
         if(!selectedTab){
@@ -37,6 +37,8 @@ const LoginModal = ({handleClosing, handleLogin}) => {
         handleClosing();
     }
 
+    console.log(windowWidth); // dummy using of varable windowWidth
+    
     return (
         <div
             sx={{
