@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 
 function getWindowWidth() {
     if(typeof window !== `undefined`){
-        const { innerWidth, innerHeight } = window;
+        const { innerWidth: width, innerHeight: height } = window;
         
         return {
-            innerWidth,
-            innerHeight
+            width,
+            height
         };
     } else {
         const width = 1920;
@@ -25,14 +25,12 @@ export default function useWindowDimensions() {
     );
 
     useEffect(() => {
-        if(typeof window !== `undefined`){
-            function handleResize() {
-                setWindowDimensions(getWindowWidth());
-            }
-
-            window.addEventListener("resize", handleResize);
-            return () => window.removeEventListener("resize", handleResize);
+        function handleResize() {
+            setWindowDimensions(getWindowWidth());
         }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return windowDimensions.width;

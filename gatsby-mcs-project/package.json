@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "my-cheat-sheets",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Student project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Antonela Orsulic <@fesb.hr> Antonio Josip Solic <asolic00@fesb.hr>",
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
@@ -34,7 +34,8 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "mcs"
   ],
   "license": "MIT",
   "scripts": {
