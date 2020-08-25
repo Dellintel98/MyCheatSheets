@@ -10,6 +10,7 @@ const theme = {
         screenHeight: "100vh",
         navContainerWidth: "80%",
         navContainerHeight: "44px",
+        footerHeight: "20px",
         navLinksHeight: "38px",
         siteContainer: "60%",
     },

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import {jsx, Styled} from "theme-ui"
 
 const LoginTab = ({isSelected, tabTitle, onclick}) => {
     let transparency;
@@ -28,7 +28,7 @@ const LoginTab = ({isSelected, tabTitle, onclick}) => {
                 }
             }}
         >
-            <p
+            <Styled.p
                 sx={{
                     fontSize: 5,
                     fontWeight: "body",
@@ -37,7 +37,7 @@ const LoginTab = ({isSelected, tabTitle, onclick}) => {
                 }}
             >
                 {tabTitle}
-            </p>
+            </Styled.p>
         </div>
     )
 }

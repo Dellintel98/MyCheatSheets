@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import {jsx, Styled} from "theme-ui"
 
 const LoginText = ({text}) => {
     return (
@@ -15,7 +15,7 @@ const LoginText = ({text}) => {
                 // backgroundColor: "grey",
             }}
         >
-            <h2
+            <Styled.h2
                 sx={{
                     width: "85%",
                     fontSize: 5,
@@ -36,7 +36,7 @@ const LoginText = ({text}) => {
                 >
                     {text}
                 </span>
-            </h2>
+            </Styled.h2>
         </div>
         // <div
         //     sx={{

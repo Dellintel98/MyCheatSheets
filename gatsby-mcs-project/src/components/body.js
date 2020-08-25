@@ -7,7 +7,7 @@ const Body = props => {
             {...props}
             sx={{
                 width: "100vw",
-                height: "93%",
+                height: "92%",
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
