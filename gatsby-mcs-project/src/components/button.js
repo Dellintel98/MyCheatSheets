@@ -17,7 +17,7 @@ const Button = ({
             border: 0,
             borderRadius: 4,
             marginBottom: 3,
-            boxShadow: '3px 3px 0px rgba(0, 0, 0, 0.25)',
+            boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.25)',
             // pass variant prop to sx
             variant: `buttons.${variant}`,
             font: "roboto",

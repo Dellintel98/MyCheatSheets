@@ -1,11 +1,22 @@
 /** @jsx jsx */
 import {jsx} from "theme-ui"
+import Container from "../container"
 
 
-const QuickAccessIconContainer = () => {
+const QuickAccessIconContainer = ({...props}) => {
 
     return(
-        null
+        <Container
+            {...props}
+            sx={{
+                display: "flex",
+                flexDirection: "row",
+                // backgroundColor: "slateblue",
+                height: "30%",
+                alignItems: "flex-start",
+                justifyContent: "center",
+            }}
+        />
     )
 }
 

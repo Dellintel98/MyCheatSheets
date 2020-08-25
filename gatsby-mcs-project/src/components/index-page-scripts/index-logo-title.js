@@ -12,6 +12,8 @@ const LogoTitle = ({logoTitle}) => {
                 height: "7%",
                 // maxHeight: "38px",
                 width: "auto",
+                marginTop: "-16px",
+                marginBottom: "8px",
             }}
         />
     )

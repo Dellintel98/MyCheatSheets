@@ -29,7 +29,14 @@ const McsFooter = () => {
                 msUserSelect: "none", /* Internet Explorer/Edge */
             }}
         >
-            <Styled.p sx={{ marginRight: "4px" }}>{currentYear} © My Cheat Sheets</Styled.p>
+            <Styled.p
+                sx={{
+                    marginRight: "4px",
+                    color: "white",
+                }}
+            >
+                {currentYear} © My Cheat Sheets
+            </Styled.p>
              • 
             <Link
                 to="/about"

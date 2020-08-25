@@ -15,7 +15,7 @@ const LoginText = ({text}) => {
                 // backgroundColor: "grey",
             }}
         >
-            <Styled.h2
+            <h2
                 sx={{
                     width: "85%",
                     fontSize: 5,
@@ -36,7 +36,7 @@ const LoginText = ({text}) => {
                 >
                     {text}
                 </span>
-            </Styled.h2>
+            </h2>
         </div>
         // <div
         //     sx={{

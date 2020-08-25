@@ -82,7 +82,7 @@ const theme = {
         },
         p: {
             ...roboto.styles.p,
-            fontSize: [0, 1, 2, 3, 4, 5, 6],
+            fontSize: 1,
         },
         pre: {
             ...roboto.styles.pre,

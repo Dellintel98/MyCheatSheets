@@ -28,7 +28,7 @@ const LoginTab = ({isSelected, tabTitle, onclick}) => {
                 }
             }}
         >
-            <Styled.p
+            <p
                 sx={{
                     fontSize: 5,
                     fontWeight: "body",
@@ -37,7 +37,7 @@ const LoginTab = ({isSelected, tabTitle, onclick}) => {
                 }}
             >
                 {tabTitle}
-            </Styled.p>
+            </p>
         </div>
     )
 }

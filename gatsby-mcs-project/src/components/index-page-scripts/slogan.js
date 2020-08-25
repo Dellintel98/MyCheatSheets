@@ -7,9 +7,7 @@ const Slogan = ({sloganText}) => {
     return(
         <Styled.h1
             sx={{
-                // fontFamily: "roboto",
-                // fontStyle: "normal",
-                // fontWeight: "heading",
+                color: "slogan",
             }}
         >
             {sloganText}

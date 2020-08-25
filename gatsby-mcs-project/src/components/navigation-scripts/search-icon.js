@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import {jsx} from "theme-ui"
 
-const SearchIcon = ({iconHeight}) => {
+const SearchIcon = ({iconHeight, iconYPadding="3px", iconXPadding="4px"}) => {
     return(
-        <div>
+        <div sx={{ height: "100%" }}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="128"
@@ -13,9 +13,8 @@ const SearchIcon = ({iconHeight}) => {
                 sx={{
                     display: "block",
                     cursor: "pointer",
-                    margin: 0,
-                    py: "3px",
-                    px: "4px",
+                    py: iconYPadding,
+                    px: iconXPadding,
                     borderRadius: "0 4px 4px 0",
                     height: iconHeight,
                     width: "auto",

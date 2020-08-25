@@ -22,6 +22,7 @@ const IndexPage = () => (
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
+                    backgroundColor: "transparent",
                 }}
             >
                 <LogoTitle logoTitle={LogoTitleImage} />
