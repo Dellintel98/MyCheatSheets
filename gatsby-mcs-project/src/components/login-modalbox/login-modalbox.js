@@ -9,11 +9,11 @@ import LoginContentContainer from "./login-content-container"
 import SignupUsernameInput from "./signup-input"
 import CloseButton from "../close-button"
 
-import FacebookLogo from "../../images/facebook-round-color.svg"
-import LinkedInLogo from "../../images/linkedin-round-color.svg"
-import GitHubLogo from "../../images/github.svg"
-import GoogleLogo from "../../images/google-color.svg"
-import CloseSvg from "../../images/close-round.svg"
+import FacebookLogo from "../../images/button-icons/facebook-round-color.svg"
+import LinkedInLogo from "../../images/button-icons/linkedin-round-color.svg"
+import GitHubLogo from "../../images/button-icons/github.svg"
+import GoogleLogo from "../../images/button-icons/google-color.svg"
+import CloseSvg from "../../images/button-icons/close-round.svg"
 import { useState } from "react"
 
 const LoginModal = ({handleClosing, handleLogin, windowWidth}) => {

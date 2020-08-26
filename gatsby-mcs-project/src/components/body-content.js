@@ -10,6 +10,7 @@ const BodyContent = props => {
                 width: "100%",
                 //minHeight: "100%",
                 height: "auto",
+                
             }}
         />
     )

@@ -9,7 +9,9 @@ const SearchBar = ({
     searchIconHeight="17px",
     iconYPadding="3px",
     iconXPadding="4px",
-    shadow="0px 0px 0px transparent"
+    shadow="0px 0px 0px transparent",
+    borderColor="primary",
+    borderWidth="1px",
 }) => {
     return (
         <div
@@ -26,9 +28,9 @@ const SearchBar = ({
                 justifyContent: "space-between",
                 backgroundColor: "background",
                 border: "solid",
-                borderWidth: "1px",
+                borderWidth: borderWidth,
                 borderRadius: "4px",
-                borderColor: "primary",
+                borderColor: borderColor,
                 boxShadow: shadow,
                 '&:focus-within': {
                     backgroundColor: "backgroundGrey",

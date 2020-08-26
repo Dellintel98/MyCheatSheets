@@ -11,6 +11,13 @@ import QuickAccessIconContainer from "../components/index-page-scripts/quick-acc
 import QuickAccessIcon from "../components/index-page-scripts/quick-access-icon"
 
 import LogoTitleImage from "../images/mcs-title-transparent.png"
+import CImage from "../images/quick-access-icons/quick-c-lang.svg"
+import CPlusPlusImage from "../images/quick-access-icons/quick-cpp-lang.svg"
+import JSImage from "../images/quick-access-icons/quick-js-lang.svg"
+import ReactJSImage from "../images/quick-access-icons/quick-react-js.svg"
+import PythonImage from "../images/quick-access-icons/quick-python-lang.svg"
+import IndexPageBackgroundImage from "../images/background-images/laptop-and-notebook.png"
+
 
 const IndexPage = () => (
     <Layout>
@@ -23,17 +30,21 @@ const IndexPage = () => (
                     justifyContent: "center",
                     alignItems: "center",
                     backgroundColor: "transparent",
+                    backgroundImage: `url(${IndexPageBackgroundImage})`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
                 }}
             >
                 <LogoTitle logoTitle={LogoTitleImage} />
                 <Slogan sloganText="FIND. MAKE. CHEAT. REPEAT." />
                 <IndexPageSearchBar />
                 <QuickAccessIconContainer>
-                    <QuickAccessIcon />
-                    <QuickAccessIcon />
-                    <QuickAccessIcon />
-                    <QuickAccessIcon />
-                    <QuickAccessIcon />
+                    <QuickAccessIcon iconImage={CImage} iconName="C quick access icon" />
+                    <QuickAccessIcon iconImage={PythonImage} iconName="Python quick access icon" />
+                    <QuickAccessIcon iconImage={CPlusPlusImage} iconName="C++ quick access icon" />
+                    <QuickAccessIcon iconImage={ReactJSImage} iconName="ReactJS quick access icon" />
+                    <QuickAccessIcon iconImage={JSImage} iconName="Javascript quick access icon" />
                 </QuickAccessIconContainer>
             </BodyContent>
         </Body>

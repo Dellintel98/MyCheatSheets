@@ -17,13 +17,15 @@ const IndexPageSearchBar = () => {
             }}
         >
             <SearchBar 
-                inputWidth="59%"
+                inputWidth="58.5%"
                 fontsize={4}
                 height="40%"
                 searchIconHeight="70%"
                 iconYPadding="8px"
                 iconXPadding="10px"
-                shadow="4px 4px 4px rgba(0, 0, 0, 0.25)"
+                shadow="4px 4px 10px rgba(0, 0, 0, 0.25)"
+                borderColor="rgba(0, 0, 0, 0.12)"
+                borderWidth="2px"
             />
         </div>
     )
