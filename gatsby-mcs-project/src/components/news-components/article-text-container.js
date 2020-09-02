@@ -1,28 +1,25 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Link } from "gatsby"
 
-const NewsTextCard = props => {
+const ArticleTextContainer = props => {
     return (
-        <Link to="../news-article"
+        <div
             {...props}
             sx={{
                 display: "flex",
-                flexDirection: "column",
-                width: "60%",
-                height: "100%",
+                width: "90%",
+                height: "auto",
                 maxWidth: "screenWidth",
-                //backgroundColor: "blue",
+                //backgroundColor: "pink",
                 marginLeft: "2em",
                 marginRight: "2em",
                 whiteSpace: "wrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 textAlign: "justify",
-
             }}
         />
     )
 }
 
-export default NewsTextCard
+export default ArticleTextContainer

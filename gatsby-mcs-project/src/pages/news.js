@@ -10,6 +10,7 @@ import NewsImageCard from "../components/news-components/news-image-card"
 import NewsTextCard from "../components/news-components/news-text-card"
 import NewsIcon from "../components/news-components/news-icon"
 import NewsImage from "../images/windows.jpg"
+import NewsImage2 from "../images/google.jpg"
 
 const News = () => (
     <Layout>
@@ -32,8 +33,13 @@ const News = () => (
 
                 <NewsContainer>
                     <NewsImageCard><NewsIcon iconSrc={NewsImage} /></NewsImageCard>
-                    <NewsTextCard>Microsoft Patch Alert:
-                        August 2020 Lenovo warns about Win10 version 2004 patch problems, Win8.1 plays catch-up, and we see the 50th reincarnation of an old “blast away the barnacles” Windows upgrade patch.With Windows 10 2004 gradually creeping (I use the term intentionally) onto more machines, faults and foibles are coming out of the woodwork. It looks like a fix for the long-lamented version 2004 defrag bugs is on the way, but we aren’t there yet. Lenovo isn’t too happy with the August version 2004 cumulative update. It’s still too ...</NewsTextCard>
+                    <NewsTextCard>
+                        <h2 sx={{ marginTop: "0.5em", marginBottom: "0.5em", }}>(Microsoft Patch Alert:August 2020)</h2> Lenovo warns about Win10 version 2004 patch problems, Win8.1 plays catch-up, and we see the 50th reincarnation of an old “blast away the barnacles” Windows upgrade patch.With Windows 10 2004 gradually creeping (I use the term intentionally) onto more machines, faults and foibles are coming out of the woodwork. It looks like a fix for the long-lamented version 2004 defrag bugs is on the way, but we aren’t there yet. Lenovo isn’t too happy with the August version 2004 cumulative update. It’s still too ...</NewsTextCard>
+                </NewsContainer>
+                <NewsContainer>
+                    <NewsImageCard><NewsIcon iconSrc={NewsImage2} /></NewsImageCard>
+                    <NewsTextCard>
+                        <h2 sx={{ marginTop: "0.5em", marginBottom: "0.5em", }}>(30 Epic Google Docs Tips and Features You Need to Be Using)</h2> If you regularly use Google Docs to create content for your website, then you’re probably well aware of how useful this free tool is. However, there are a ton of shortcuts, apps, and built-in features that you might not be using. By reading through and applying the hacks highlighted in this post, you’re going to …</NewsTextCard>
                 </NewsContainer>
             </BodyContent>
             <SideBarNews />
