@@ -12,9 +12,9 @@ import Container from "./container"
 import NavLinks from "./navigation-scripts/navigation-links"
 
 
-import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
-import LogInOutCard from "./navigationScripts/log-in-out-card"
-import HiddenMenu from "./navigationScripts/hidden-menu"
+import NavigationSearchBar from "./navigation-scripts/navigation-search-bar"
+import LogInOutCard from "./navigation-scripts/log-in-out-card"
+import HiddenMenu from "./navigation-scripts/hidden-menu"
 // import { useState, useEffect } from "react"
 // import LoginModal from "./login-modalbox/login-modalbox"
 

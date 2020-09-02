@@ -8,8 +8,8 @@ const BodyContentHeader = props => {
             {...props}
             sx={{
                 height: "10%",
-                width: "90%",
-                background: "pink",
+                width: "100%",
+                //background: "pink",
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
