@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import { jsx } from "theme-ui"
 import SearchIcon from "./navigation-scripts/search-icon"
 
 const SearchBar = ({

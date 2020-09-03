@@ -36,10 +36,11 @@ const SideBarEditor = () => {
                 </Subtitle>
                 <Select>
                     <option value="" selected disabled hidden>Category</option>
-                    <option>JavaScript</option>
-                    <option>C#</option>
                     <option>C++</option>
+                    <option>C#</option>
+                    <option>JavaScript</option>
                     <option>Python</option>
+                    <option>React</option>
                 </Select>
                 <div
                     sx={{
