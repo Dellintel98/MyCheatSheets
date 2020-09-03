@@ -16,6 +16,10 @@ const NewsArticle = () => (
                 height: "100%",
                 alignItems: "top",
                 mx: "auto",
+                display: "flex",
+                alignItems: "space-around",
+                flexDirection: "column",
+                justifyContent: "center",
             }}>
                 <BodyContentHeader
                     sx={{
