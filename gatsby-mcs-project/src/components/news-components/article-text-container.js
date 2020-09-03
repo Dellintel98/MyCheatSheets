@@ -7,12 +7,12 @@ const ArticleTextContainer = props => {
             {...props}
             sx={{
                 display: "flex",
-                width: "90%",
+                width: "60%",
                 height: "auto",
                 maxWidth: "screenWidth",
                 //backgroundColor: "pink",
-                marginLeft: "2em",
-                marginRight: "2em",
+                marginLeft: "auto",
+                marginRight: "auto",
                 whiteSpace: "wrap",
                 overflow: "hidden",
                 textOverflow: "ellipsis",
