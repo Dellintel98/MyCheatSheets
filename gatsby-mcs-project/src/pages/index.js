@@ -30,7 +30,7 @@ const IndexPage = () => (
                     justifyContent: "center",
                     alignItems: "center",
                     backgroundColor: "transparent",
-                    backgroundImage: `url(${IndexPageBackgroundImage})`,
+                    backgroundImage: `url(${IndexPageBackgroundImage})`, // Ovo napraviti s gatsby slikom kako bi bilo brže i radi onog
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
