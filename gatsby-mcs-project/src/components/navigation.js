@@ -7,15 +7,17 @@ import calculateResponsivity from "../hooks/responsive-navigation"
 import navLogoImg from "../images/main-logo.png"
 import navLogoTitle from "../images/navigation-title.png"
 
-import NavContainer from "./navigationScripts/nav-container"
+import NavContainer from "./navigation-scripts/nav-container"
 import Container from "./container"
-import NavLinks from "./navigationScripts/navigation-links"
+import NavLinks from "./navigation-scripts/navigation-links"
 
-import NavigationSearchBar from "./navigationScripts/navigation-search-bar"
-import LogInOutCard from "./navigationScripts/log-in-out-card"
-import HiddenMenu from "./navigationScripts/hidden-menu"
+
+import NavigationSearchBar from "./navigation-scripts/navigation-search-bar"
+import LogInOutCard from "./navigation-scripts/log-in-out-card"
+import HiddenMenu from "./navigation-scripts/hidden-menu"
 // import { useState, useEffect } from "react"
 // import LoginModal from "./login-modalbox/login-modalbox"
+
 
 const LogoLink = () => {
     return (
@@ -49,9 +51,9 @@ const NavBar = ({ menuItems }) => {
     // const [showLoginModal, setShowLoginModal] = useState(false);
     let hiddenMenuVisible = false;
     let windowWidth = useWindowDimensions();
-    const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
+    const { navigationItems, hiddenItems } = calculateResponsivity(windowWidth, menuItems);
 
-    if(windowWidth < 1250) {
+    if (windowWidth < 1250) {
         hiddenMenuVisible = true;
     } else {
         hiddenMenuVisible = false;

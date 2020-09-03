@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import { jsx } from "theme-ui"
 import SearchBar from "../search-bar"
 
 const NavigationSearchBar = () => {
