@@ -52,3 +52,13 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+
+// @-moz-document url-prefix() {
+//     .adjust-padding a {
+//         padding-top: 15px;
+//     }
+//     .adjust-padding-current a {
+//         padding-top: 12px;
+//     }
+// }

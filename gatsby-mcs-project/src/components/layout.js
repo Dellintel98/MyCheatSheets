@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 import { css } from "theme-ui"
+import "typeface-roboto"
 
 import useGlobalState from "../hooks/global-state-storage"
 import useWindowDimensions from "../hooks/get-screen-width"
@@ -61,7 +62,7 @@ const Layout = props => {
             backgroundColor: `background`,
             color: `text`,
             lineHeight: `body`,
-            fontFamily: `body`,
+            fontFamily: "Roboto",
             fontWeight: `body`,
           },
           a: {

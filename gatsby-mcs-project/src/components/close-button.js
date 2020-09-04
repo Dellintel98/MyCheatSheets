@@ -29,7 +29,7 @@ const CloseButton = ({
                 alignSelf: "flex-start",
                 right: divRight,
                 top: divTop,
-                zIndex: 3,
+                zIndex: 4,
                 cursor: "pointer",
             }}
         >

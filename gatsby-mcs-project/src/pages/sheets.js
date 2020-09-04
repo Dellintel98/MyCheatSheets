@@ -44,7 +44,7 @@ const Sheets = (/* data */) => {
           <BodyContentHeader>
             <BodyIcon iconSrc={sheetIcon} />
             <h2>Sheets</h2>
-            <BodySearchBar />
+            {/* <BodySearchBar /> */}
           </BodyContentHeader>
 
           <h4 sx={{ width: "50%" }}>C++</h4>

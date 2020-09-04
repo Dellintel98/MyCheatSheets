@@ -48,7 +48,7 @@ const LoginModal = ({handleClosing, handleLogin, windowWidth}) => {
                 top: 0,
                 right: 0,
                 backgroundColor: "rgba(0, 0, 0, 0.25)",
-                zIndex: 2,
+                zIndex: 3,
                 display: "flex",
                 alignItems: "center",
                 userSelect: "none", /* supported by Chrome and Opera */
@@ -70,7 +70,7 @@ const LoginModal = ({handleClosing, handleLogin, windowWidth}) => {
                     marginTop: "7%",
                     borderRadius: 10,
                     backgroundColor: "background",
-                    zIndex: 4,
+                    zIndex: 5,
                 }}
             >
                 <LoginHeader>

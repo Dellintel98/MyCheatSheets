@@ -21,8 +21,6 @@ const Select = ({
             borderColor: "black",
             border: 10,
             borderRadius: 4,
-
-
         }}
     />
 export default Select
