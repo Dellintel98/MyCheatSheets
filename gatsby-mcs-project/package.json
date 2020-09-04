@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "my-cheat-sheets",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Student project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Antonela Orsulic <@fesb.hr> Antonio Josip Solic <asolic00@fesb.hr>",
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.23",
@@ -27,13 +27,18 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
-    "theme-ui": "^0.2.49"
+    "react-select": "^3.1.0",
+    "theme-ui": "^0.2.49",
+    "typeface-roboto": "0.0.75",
+    "typeface-source-code-pro": "^1.1.3",
+    "use-global-hook": "^0.2.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "mcs"
   ],
   "license": "MIT",
   "scripts": {

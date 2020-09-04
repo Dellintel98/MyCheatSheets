@@ -3,7 +3,7 @@ import {jsx} from "theme-ui"
 import MenuIcon from "./hidden-menu-icon"
 import MenuContent from "./hidden-menu-content"
 
-const HiddenMenu = ({menuItems}) => {
+const HiddenMenu = ({menuItems, isUserLoggedIn}) => {
     return (
         <div
             sx={{
@@ -35,7 +35,7 @@ const HiddenMenu = ({menuItems}) => {
             }}
         >
             <MenuIcon />
-            <MenuContent menuItems={menuItems} />
+            <MenuContent menuItems={menuItems} isUserLoggedIn={isUserLoggedIn} />
         </div>
     )
 }

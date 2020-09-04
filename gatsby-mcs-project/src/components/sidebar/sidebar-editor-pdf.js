@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+// import React from "react"
 import SideBar from "../sidebar/sidebar"
 import SideBarContainer from "../sidebar/sidebar-container"
 import Subtitle from "../sidebar/sidebar-subtitle"
@@ -24,16 +24,16 @@ const SideBarEditor = () => {
                 <Title>Editing options</Title>
                 <Subtitle>
                     Cheat sheet title*
-                    </Subtitle>
+                </Subtitle>
                 <Input placeholder="Input sheet title..." />
 
                 <Subtitle>
                     Cheat sheet thumbnail
-                    </Subtitle>
+                </Subtitle>
                 <Input placeholder="Load Image... " />
                 <Subtitle>
                     Cheat sheet category*
-                    </Subtitle>
+                </Subtitle>
                 <Select>
                     <option value="" selected disabled hidden>Category</option>
                     <option>C++</option>

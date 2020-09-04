@@ -8,15 +8,15 @@ const NewsContainer = props => {
             {...props}
             sx={{
                 display: "flex",
-                width: "90%",
+                width: "80%",
                 height: "35%",
                 maxWidth: "screenWidth",
                 marginTop: "1em",
                 marginBottom: "2em",
-                marginLeft: "2.5em",
-                //backgroundColor: "green",
+                // marginLeft: "2.5em",
+                // backgroundColor: "green",
                 boxShadow: "5px 5px 10px rgba(0,0,0,0.6)",
-                borderRadius: "10px",
+                borderRadius: "5px",
                 overflow: "hidden",
 
             }}

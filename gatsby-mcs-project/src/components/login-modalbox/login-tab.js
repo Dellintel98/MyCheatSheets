@@ -1,16 +1,20 @@
 /** @jsx jsx */
-import {jsx} from "theme-ui"
+import {jsx, Styled} from "theme-ui"
 
-const LoginTab = ({isSelected, tabTitle}) => {
+const LoginTab = ({isSelected, tabTitle, onclick}) => {
     let transparency;
+    let hoverColor;
     if(isSelected){
         transparency = 1;
+        hoverColor = 1;
     } else {
         transparency = 0.9;
+        hoverColor = 0.85;
     }
 
     return (
         <div
+            onClick={onclick}
             sx={{
                 width: "50%",
                 height: "100%",
@@ -20,7 +24,7 @@ const LoginTab = ({isSelected, tabTitle}) => {
                 justifyContent: "center",
                 backgroundColor: `rgba(20, 23, 41, ${transparency})`,
                 '&:hover': {
-                    backgroundColor: `rgba(20, 23, 41, 0.8)`,
+                    backgroundColor: `rgba(20, 23, 41, ${hoverColor})`,
                 }
             }}
         >

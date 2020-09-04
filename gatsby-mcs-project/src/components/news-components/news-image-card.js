@@ -8,7 +8,7 @@ const NewsImageCard = props => {
             {...props}
             sx={{
                 display: "flex",
-                width: "40%",
+                width: "35%",
                 height: "100%",
                 maxWidth: "screenWidth",
                 // backgroundColor: "pink",

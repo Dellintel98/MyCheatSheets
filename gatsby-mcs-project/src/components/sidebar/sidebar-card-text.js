@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { useRef, useEffect } from "react"
+// import { useRef, useEffect } from "react"
 
 // const chunkString = (str, length) => {
 //     return str.match(new RegExp('.{1,' + length + '}', 'g'));

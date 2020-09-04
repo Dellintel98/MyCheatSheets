@@ -10,6 +10,7 @@ const theme = {
         screenHeight: "100vh",
         navContainerWidth: "80%",
         navContainerHeight: "44px",
+        footerHeight: "20px",
         navLinksHeight: "38px",
         siteContainer: "60%",
     },
@@ -81,7 +82,7 @@ const theme = {
         },
         p: {
             ...roboto.styles.p,
-            fontSize: [0, 1, 2, 3, 4, 5, 6],
+            fontSize: 1,
         },
         pre: {
             ...roboto.styles.pre,

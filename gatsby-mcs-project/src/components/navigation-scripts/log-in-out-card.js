@@ -1,11 +1,12 @@
 /** @jsx jsx */
-import { Link } from "gatsby"
 import {jsx} from "theme-ui"
 
-const LogInOutCard = () => {
+const LogInOutCard = ({onclick, isUserLoggedIn}) => {
+    const logInOutText = (!isUserLoggedIn) ? "Log in" : "Log out";
+
     return (
-        <Link 
-            to='/'
+        <div 
+            onClick={onclick}
             sx={{
                 marginLeft: 1,
                 px: 2,
@@ -22,6 +23,7 @@ const LogInOutCard = () => {
                     bg: 'backgroundGrey',
                     borderBottomColor: 'backgroundGrey',
                     color: "alternate",
+                    cursor: "pointer",
                 },
                 userSelect: "none", /* supported by Chrome and Opera */
                 webkitUserSelect: "none", /* Safari */
@@ -30,8 +32,8 @@ const LogInOutCard = () => {
                 msUserSelect: "none", /* Internet Explorer/Edge */
             }}
         >
-            Log in
-        </Link>
+            {logInOutText}
+        </div>
     )
 }
 

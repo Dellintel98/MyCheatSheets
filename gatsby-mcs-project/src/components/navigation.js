@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Header } from "theme-ui"
 import { Link } from "gatsby"
-import useWindowDimensions from "../hooks/get-screen-width"
 import calculateResponsivity from "../hooks/responsive-navigation"
 
 import navLogoImg from "../images/main-logo.png"
@@ -11,17 +10,28 @@ import NavContainer from "./navigation-scripts/nav-container"
 import Container from "./container"
 import NavLinks from "./navigation-scripts/navigation-links"
 
-
 import NavigationSearchBar from "./navigation-scripts/navigation-search-bar"
 import LogInOutCard from "./navigation-scripts/log-in-out-card"
 import HiddenMenu from "./navigation-scripts/hidden-menu"
-// import { useState, useEffect } from "react"
-// import LoginModal from "./login-modalbox/login-modalbox"
+import { useState } from "react"
+import LoginModal from "./login-modalbox/login-modalbox"
 
+const LogoLink = ({windowWidth}) => {
+    const isLogoTitleVisible = (windowWidth > 700) ? true : false;
 
-const LogoLink = () => {
     return (
-        <Link to="/" sx={{ display: "flex", alignItems: "center" }}>
+        <Link 
+            to="/" 
+            sx={{ 
+                display: "flex",
+                alignItems: "center",
+                userSelect: "none", /* supported by Chrome and Opera */
+                webkitUserSelect: "none", /* Safari */
+                khtmlUserSelect: "none", /* Konqueror HTML */
+                mozUserSelect: "none", /* Firefox */
+                msUserSelect: "none", /* Internet Explorer/Edge */
+            }}
+        >
             <img
                 src={navLogoImg}
                 alt="My Cheat Sheet logo"
@@ -32,6 +42,7 @@ const LogoLink = () => {
                     px: 1,
                 }}
             />
+            {isLogoTitleVisible &&
             <img
                 src={navLogoTitle}
                 alt="My Cheat Sheet logo"
@@ -41,25 +52,27 @@ const LogoLink = () => {
                     width: "auto",
                     px: 1,
                 }}
-            />
+            />}
         </Link>
     )
 }
 
 
-const NavBar = ({ menuItems }) => {
-    // const [showLoginModal, setShowLoginModal] = useState(false);
-    let hiddenMenuVisible = false;
-    let windowWidth = useWindowDimensions();
-    const { navigationItems, hiddenItems } = calculateResponsivity(windowWidth, menuItems);
+const NavBar = ({ windowWidth, menuItems, handleLogin, handleLogout, isUserLoggedIn }) => {
+    const hiddenMenuVisible = (windowWidth < 1250) ? true : false;
+    const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
 
-    if (windowWidth < 1250) {
-        hiddenMenuVisible = true;
-    } else {
-        hiddenMenuVisible = false;
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const handleShow = () => {
+        if(!isUserLoggedIn){
+            setShowLoginModal(true);
+        } else {
+            handleLogout()
+        }
     }
-
-    // const handleShow = () => setShowLoginModal(true);
+    const handleCloseModal = () => {
+        setShowLoginModal(false);
+    }
 
     return (
         <NavContainer
@@ -71,18 +84,17 @@ const NavBar = ({ menuItems }) => {
                 width: "auto",
             }}
         >
-            <NavLinks menuItems={navigationItems} />
-            <NavigationSearchBar />
-            <LogInOutCard />
-            {/* <LogInOutCard onClick={handleShow}/> */}
-            {/* <LoginModal show={showLoginModal} /> */}
-            {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} />}
+            <NavLinks menuItems={navigationItems} isUserLoggedIn={isUserLoggedIn} />
+            <NavigationSearchBar windowWidth={windowWidth} />
+            <LogInOutCard onclick={handleShow} isUserLoggedIn={isUserLoggedIn} />
+            {showLoginModal && <LoginModal handleClosing={handleCloseModal} handleLogin={handleLogin} windowWidth={windowWidth} />}
+            {hiddenMenuVisible && <HiddenMenu menuItems={hiddenItems} isUserLoggedIn={isUserLoggedIn} />}
         </NavContainer>
     )
 }
 
 
-const Navigation = ({ menuItems }) => {
+const Navigation = ({ menuItems, handleLogin, handleLogout, isUserLoggedIn, windowWidth }) => {    
     return (
         <Header
             sx={{
@@ -90,6 +102,7 @@ const Navigation = ({ menuItems }) => {
                 alignItems: "center",
                 position: "relative",
                 boxShadow: '0 0 5px rgba(0, 0, 0, 0.25)',
+                zIndex: 1,
             }}
         >
             <Container
@@ -101,8 +114,8 @@ const Navigation = ({ menuItems }) => {
                     backgroundColor: "background",
                 }}
             >
-                <LogoLink />
-                <NavBar menuItems={menuItems} />
+                <LogoLink windowWidth={windowWidth} />
+                <NavBar windowWidth={windowWidth} menuItems={menuItems} isUserLoggedIn={isUserLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} />
             </Container>
         </Header>
     )

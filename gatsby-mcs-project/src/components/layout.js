@@ -3,8 +3,12 @@ import { jsx } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 import { css } from "theme-ui"
+import "typeface-roboto"
 
+import useGlobalState from "../hooks/global-state-storage"
+import useWindowDimensions from "../hooks/get-screen-width"
 import Navigation from "./navigation"
+import Footer from "./footer"
 
 
 const Layout = props => {
@@ -21,7 +25,26 @@ const Layout = props => {
     }
   `)
 
-  const {siteMetadata: {menuItems}} = data.site
+  const {siteMetadata: {menuItems}} = data.site;
+  
+  // const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [globalState, globalActions] = useGlobalState();
+
+  const userLoggedIn = globalState.isUserLoggedIn;
+
+  const handleLogin = () => {
+    if(!userLoggedIn){
+      globalActions.setUserLoggedIn(true);
+    }
+  }
+
+  const handleLogout = () => {
+    if(userLoggedIn){
+      globalActions.setUserLoggedIn(false);
+    }
+  }
+
+  const windowWidth = useWindowDimensions();
 
   return (
     <div>
@@ -39,7 +62,7 @@ const Layout = props => {
             backgroundColor: `background`,
             color: `text`,
             lineHeight: `body`,
-            fontFamily: `body`,
+            fontFamily: "Roboto",
             fontWeight: `body`,
           },
           a: {
@@ -48,6 +71,7 @@ const Layout = props => {
         })}
       />
 
+      {(windowWidth > 230) ?
       <div
         sx={{
           position: "relative",
@@ -55,9 +79,10 @@ const Layout = props => {
           overflow: "hidden",
         }}
       >
-        <Navigation menuItems={menuItems} />
+        <Navigation menuItems={menuItems} isUserLoggedIn={userLoggedIn} handleLogin={handleLogin} handleLogout={handleLogout} windowWidth={windowWidth} />
         {props.children}
-      </div>
+        <Footer />
+      </div> : null}
     </div>
   )
 }

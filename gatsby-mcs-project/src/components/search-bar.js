@@ -2,23 +2,36 @@
 import { jsx } from "theme-ui"
 import SearchIcon from "./navigation-scripts/search-icon"
 
-const SearchBar = () => {
+const SearchBar = ({
+    inputWidth="155px",
+    fontsize=1,
+    height="23px",
+    searchIconHeight="17px",
+    iconYPadding="3px",
+    iconXPadding="4px",
+    shadow="0px 0px 0px transparent",
+    borderColor="primary",
+    borderWidth="1px",
+}) => {
     return (
         <div
             sx={{
+                position: "relative",
                 overflow: "hidden",
                 mx: 2,
                 minWidth: "180px",
-                height: "23px",
+                width: inputWidth,
+                height: height,
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
                 backgroundColor: "background",
                 border: "solid",
-                borderWidth: "1px",
+                borderWidth: borderWidth,
                 borderRadius: "4px",
-                borderColor: "primary",
+                borderColor: borderColor,
+                boxShadow: shadow,
                 '&:focus-within': {
                     backgroundColor: "backgroundGrey",
                 }
@@ -28,7 +41,7 @@ const SearchBar = () => {
                 type="text"
                 placeholder="Search..."
                 sx={{
-                    width: "155px",
+                    width: "100%",
                     py: 1,
                     paddingLeft: 3,
                     my: 1,
@@ -36,8 +49,8 @@ const SearchBar = () => {
                     borderRadius: "4px 0 0 4px",
                     border: "none",
                     color: "secondary",
-                    font: "roboto",
-                    fontSize: 1,
+                    fontFamily: `body`,
+                    fontSize: fontsize,
                     fontWeight: 300,
                     lineHeight: 1.125,
                     backgroundColor: "background",
@@ -48,7 +61,7 @@ const SearchBar = () => {
                     },
                 }}
             />
-            <SearchIcon iconHeight={"17px"} />
+            <SearchIcon iconHeight={searchIconHeight} iconYPadding={iconYPadding} iconXPadding={iconXPadding} />
         </div>
     )
 }

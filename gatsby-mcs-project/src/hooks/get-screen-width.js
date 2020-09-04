@@ -1,12 +1,22 @@
 import { useEffect, useState } from "react"
 
 function getWindowWidth() {
-    const { innerWidth: width, innerHeight: height } = window;
+    if(typeof window !== `undefined`){
+        const { innerWidth: width, innerHeight: height } = window;
+        
+        return {
+            width,
+            height
+        };
+    } else {
+        const width = 1920;
+        const height = 1080;
 
-    return {
-        width,
-        height
-    };
+        return{
+            width,
+            height
+        };
+    }
 }
 
 export default function useWindowDimensions() {

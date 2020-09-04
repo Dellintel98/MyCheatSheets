@@ -3,7 +3,7 @@ import {jsx} from "theme-ui"
 import { globalHistory as history } from "@reach/router"
 import MenuLink from "./hidden-menu-link"
 
-const MenuContent = ({menuItems}) => {
+const MenuContent = ({menuItems, isUserLoggedIn}) => {
     const { location } = history;
     let topMargin = "0px";
     const numberOfItems = menuItems.length;
@@ -36,10 +36,11 @@ const MenuContent = ({menuItems}) => {
                 justifyContent: "space-between",
                 backgroundColor: "background",
                 boxShadow: '-1px 1px 3px rgba(0, 0, 0, 0.25)',
-                zIndex: 1,
+                zIndex: 2,
             }}
         >
             {menuItems.map(({ link, text }) => (
+                (!isUserLoggedIn && text === "My sheets") ? null :
                 <MenuLink key={text} to={link} isCurrentPage={location.pathname === link} >
                     {text}
                 </MenuLink>

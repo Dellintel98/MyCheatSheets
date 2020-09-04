@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+// import React from "react"
 import SideBar from "../sidebar/sidebar"
 import SideBarContainer from "../sidebar/sidebar-container"
 import Subtitle from "../sidebar/sidebar-subtitle"
