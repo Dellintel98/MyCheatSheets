@@ -9,7 +9,7 @@ const BodySearchBar = ({sortingOptions}) => {
             sx={{
                 height: "80%",
                 width: "60%",
-                // backgroundColor: "black",
+                backgroundColor: "black",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",

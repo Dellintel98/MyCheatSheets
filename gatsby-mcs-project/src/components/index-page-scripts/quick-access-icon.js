@@ -2,8 +2,8 @@
 import {jsx} from "theme-ui"
 
 
-const QuickAccessIcon = ({iconImage, iconName}) => {
-    const iconSize = "152px";
+const QuickAccessIcon = ({iconImage, iconName, iconSize="152px"}) => {
+    // const iconSize = "152px";
     // const iconSize = "162px";
 
     return(

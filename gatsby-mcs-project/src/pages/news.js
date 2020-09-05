@@ -18,13 +18,13 @@ const sortingOptions = [
     {value: 'sort-by', label: 'Sort by'},
     {value: 'date-oldest', label: 'Date (oldest)'},
     {value: 'date-newest', label: 'Date (newest)'},
-    {value: 'views-most', label: 'Views (most)'},
-    {value: 'views-least', label: 'Views (least)'}
+    {value: 'views-most', label: 'Most views'},
+    {value: 'comments-most', label: 'Most comments'}
 ]
 
 const News = () => (
     <Layout>
-        <Body sx={{ overflow: "scrollbar", }}>
+        <Body sx={{ overflowY: "scroll", overflowX: "hidden" }}>
             <BodyContent sx={{
                 height: "100%",
                 display: "flex",

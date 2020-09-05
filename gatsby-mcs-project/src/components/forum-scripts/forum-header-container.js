@@ -1,20 +1,21 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-const Body = props => {
+const ForumHeaderContainer = props => {
     return (
         <div
             {...props}
             sx={{
-                width: "100vw",
-                height: "93%",
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "flex-start",
+                alignItems: "center",
                 justifyContent: "space-between",
+                backgroundColor: "lightgray",
+                width: "84%",
+                height: "100%",
             }}
         />
     )
 }
 
-export default Body
+export default ForumHeaderContainer

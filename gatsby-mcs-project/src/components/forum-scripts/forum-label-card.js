@@ -1,18 +1,18 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-const BodyContent = props => {
+const ForumLabelCard = props => {
     return (
         <div
             {...props}
             sx={{
-                backgroundColor: "slateblue",
+                backgroundColor: "maroon",
                 width: "100%",
-                //minHeight: "100%",
-                height: "auto",
+                height: "28%",
+                
             }}
         />
     )
 }
 
-export default BodyContent
+export default ForumLabelCard
