@@ -13,8 +13,7 @@ const BodyContentHeader = props => {
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-            }
-            }>
+            }}>
 
         </div >
     )

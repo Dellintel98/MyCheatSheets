@@ -10,13 +10,12 @@ const MultipleQuestionContainer = props => {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "space-between",
-                backgroundColor: "mediumaquamarine",
+                // backgroundColor: "mediumaquamarine",
+                backgroundColor: "transparent",
                 width: "70%",
                 height: "80%",
                 minHeight: "80%",
                 maxHeight: "80%",
-                overflowX: "hidden",
-                overflowY: "scroll",
             }}
         />
     )

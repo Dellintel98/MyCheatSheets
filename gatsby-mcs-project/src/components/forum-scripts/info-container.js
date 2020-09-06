@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-const InfoContainer = props => {
+const InfoContainer = ({containerWidth="12%", backgroundColor="transparent", ...props}) => {
     return (
         <div
             {...props}
@@ -9,9 +9,9 @@ const InfoContainer = props => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "space-around",
-                backgroundColor: "oldlace",
-                width: "15%",
+                justifyContent: "center",
+                backgroundColor: backgroundColor,
+                width: containerWidth,
                 height: "100%",
             }}
         />

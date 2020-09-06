@@ -6,11 +6,23 @@ const NewQuestionButton = props => {
         <div
             {...props}
             sx={{
-                backgroundColor: "lightsalmon",
-                width: "17%",
-                height: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "primary",
+                color: "white",
+                width: "15%",
+                height: "40%",
+                borderRadius: "4px",
+                cursor: "pointer",
+                boxShadow: "4px 4px 5px rgba(0, 0, 0, 0.25)",
+                '&:hover': {
+                    backgroundColor: "alternateHover",
+                }
             }}
-        />
+        >
+            Ask question
+        </div>
     )
 }
 

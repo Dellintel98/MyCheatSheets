@@ -15,10 +15,9 @@ const NewsContainer = props => {
                 marginBottom: "2em",
                 // marginLeft: "2.5em",
                 // backgroundColor: "green",
-                boxShadow: "5px 5px 10px rgba(0,0,0,0.6)",
+                boxShadow: "5px 5px 10px rgba(0,0,0,0.25)",
                 borderRadius: "5px",
                 overflow: "hidden",
-
             }}
         />
     )

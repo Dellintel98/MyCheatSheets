@@ -10,10 +10,14 @@ const QuestionTextContainer = props => {
                 flexDirection: "column",
                 alignItems: "left",
                 justifyContent: "flex-start",
-                backgroundColor: "palegoldenrod",
+                backgroundColor: "transparent",
+                // backgroundColor: "wheat",
                 width: "65%",
-                height: "100%",
+                maxWidth: "65%",
+                minWidth: "65%",
+                height: "70%",
                 textAlign: "justify",
+                position: "relative",
             }}
         />
     )
