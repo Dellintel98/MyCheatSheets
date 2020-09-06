@@ -45,11 +45,11 @@ const SideBarForum = () => {
                 <Title>Latest news</Title>
                 <SidebarCard>
                     <SideBarIcon iconSrc={articleIcon} />
-                    <SidebarCardText>These are News1</SidebarCardText>
+                    <SidebarCardText>Microsoft Patch Alert:August 2020</SidebarCardText>
                 </SidebarCard>
                 <SidebarCard>
                     <SideBarIcon iconSrc={articleIcon} />
-                    <SidebarCardText>These are News2</SidebarCardText>
+                    <SidebarCardText>30 Epic Google Docs Tips and Features You Need to Be Using</SidebarCardText>
                 </SidebarCard>
                 <SidebarCard>
                     <SideBarIcon iconSrc={articleIcon} />
