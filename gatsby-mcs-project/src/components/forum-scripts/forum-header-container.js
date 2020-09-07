@@ -10,8 +10,8 @@ const ForumHeaderContainer = props => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "space-between",
-                // backgroundColor: "lightgray",
-                backgroundColor: "transparent",
+                backgroundColor: "lightgray",
+                // backgroundColor: "transparent",
                 width: "84%",
                 height: "100%",
             }}

@@ -6,7 +6,7 @@ import Body from "../components/body"
 import BodyContent from "../components/body-content"
 import BodyContentHeader from "../components/body-content/body-content-header"
 import BodySearchBar from "../components/body-content/body-search-bar"
-import ForumHeader from "../components/forum-scripts/forum-header"
+import MainHeader from "../components/main-header"
 import HeaderContainer from "../components/forum-scripts/forum-header-container"
 import ForumLabelCard from "../components/forum-scripts/forum-label-card"
 import NewQuestionButton from "../components/forum-scripts/new-question-button"
@@ -91,7 +91,7 @@ const Forum = () => (
                     backgroundColor: "transparent",
                 }}
             >
-                <ForumHeader>
+                <MainHeader>
                     <BodyContentHeader
                         sx={{
                             height: "70%",
@@ -109,7 +109,7 @@ const Forum = () => (
                     </BodyContentHeader>
                     {/* <BodyDivisionLine /> */}
                     <ForumLabelCard labelText="asked questions" labelValue={totalQuestions} />
-                </ForumHeader>
+                </MainHeader>
                 <MultipleQuestionContainer>
                     {questions.map((question) => (
                         <QuestionContainer topMargin="0em" key={question.questionId} >

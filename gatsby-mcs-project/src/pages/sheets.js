@@ -3,83 +3,65 @@ import { jsx } from "theme-ui"
 import Layout from "../components/layout"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
-import { graphql } from "gatsby"
-import BodySearchBar from "../components/body-content/body-search-bar"
+import SideBarCreators from "../components/sidebar/sidebar-creators"
+import MainHeader from "../components/main-header"
 import BodyContentHeader from "../components/body-content/body-content-header"
-import sheetIcon from "../images/sheet-icon.png"
-import BodyIcon from "../components/body-content/body-icon"
-import BodyIconElement from "../components/body-content/body-icon-element"
-import BodyCategory from "../components/body-content/body-category"
-import BodyCategoryElement from "../components/body-content/body-category-element"
+import BodySearchBar from "../components/body-content/body-search-bar"
+import SheetsCardContainer from "../components/sheets-components/sheets-card-container"
+import SheetsContainer from "../components/sheets-components/sheets-container"
+
+import SheetsCard from "../components/sheets-components/sheets-card"
+import CreatorAvatar from "../images/avatar.svg"
+import CFileIcon from "../images/file-icons/c_file_icon.svg"
+import CppFileIcon from "../images/file-icons/c++_file_icon.svg"
 
 
-//import Img from "gatsby-image"
+const sortingOptions = [
+    { value: 'sort-by', label: 'Sort by' },
+    { value: 'date-oldest', label: 'Date (oldest)' },
+    { value: 'date-newest', label: 'Date (newest)' },
+    { value: 'views-most', label: 'Views (most)' },
+    { value: 'views-least', label: 'Views (least)' }
+]
 
-const Sheets = (/* data */) => {
-  //console.log("Data from page Sheets", data)
-
-  return (
-    /*<Layout>
-            <h1>Sheets</h1>
-            {/*<img src="./grand-piano-wallpaper.jpg" alt="Grand piano"/>
-            <Img
-                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-                alt="Gatsby Docs are awesome"
-            />
-
-            {data.allFile.edges.map(function({node}){
-              <Img key={node.id} fluid={node.childImageSharp.fluid} />
-            })}
-
-            <h2>Sheet content below image</h2>
-        </Layout>*/
+const Sheets = () => (
     <Layout>
-      <Body sx={{ overflow: "scrollbar", }}>
-        <BodyContent sx={{
-          width: "90%",
-          height: "100%",
-          alignItems: "top",
-          mx: "auto",
-        }}>
-          <BodyContentHeader>
-            <BodyIcon iconSrc={sheetIcon} />
-            <h2>Sheets</h2>
-            {/* <BodySearchBar /> */}
-          </BodyContentHeader>
-
-          <h4 sx={{ width: "50%" }}>C++</h4>
-          <BodyCategory>
-            <BodyCategoryElement>
-              <BodyIconElement iconSrc={sheetIcon} />
-            </BodyCategoryElement>
-            <BodyCategoryElement>
-              <BodyIconElement iconSrc={sheetIcon} />
-            </BodyCategoryElement>
-            <BodyCategoryElement>
-              <BodyIconElement iconSrc={sheetIcon} />
-            </BodyCategoryElement>
-          </BodyCategory>
-        </BodyContent>
-      </Body>
+        <Body sx={{ overflow: "scrollbar", }}>
+            <BodyContent sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                //backgroundColor: "lightgreen",
+            }}>
+                <MainHeader>
+                    <BodyContentHeader
+                        sx={{
+                            marginTop: "1em",
+                            marginBottom: "1em",
+                            height: "20%",
+                            width: "80%",
+                            justifyContent: "space-between",
+                            backgroundColor: "lightgray",
+                        }}
+                    >
+                        <h1>Sheets</h1>
+                        <BodySearchBar sortingOptions={sortingOptions} />
+                    </BodyContentHeader>
+                </MainHeader>
+                <SheetsContainer>
+                    <h2>C</h2>
+                    <SheetsCardContainer>
+                        <SheetsCard IconImage={CFileIcon} IconName="cFileIcon" Number="88" SheetTitle="C cheat sheet" Username={"creator01"} />
+                        <SheetsCard IconImage={CppFileIcon} IconName="cppFileIcon" Number="88" SheetTitle="C++ cheat sheet" Username={"creator013"} />
+                    </SheetsCardContainer>
+                    More...
+                </SheetsContainer>
+            </BodyContent>
+            <SideBarCreators />
+        </Body>
     </Layout>
-  )
-}
+)
 
 export default Sheets
-
-export const query = graphql`
-  {
-    allFile(filter: {absolutePath: {regex: "//content/images//"}}) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
-`
