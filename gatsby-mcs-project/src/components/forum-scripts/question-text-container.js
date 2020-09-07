@@ -18,6 +18,7 @@ const QuestionTextContainer = props => {
                 height: "70%",
                 textAlign: "justify",
                 position: "relative",
+                overflow: "hidden",
             }}
         />
     )

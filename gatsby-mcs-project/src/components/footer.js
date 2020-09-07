@@ -33,6 +33,7 @@ const McsFooter = () => {
                 sx={{
                     marginRight: "4px",
                     color: "white",
+                    fontWeight: "subtitle",
                 }}
             >
                 {currentYear} © My Cheat Sheets

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SideBarNews from "../components/sidebar/sidebar-forum"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
+import MainHeader from "../components/main-header"
 import BodyContentHeader from "../components/body-content/body-content-header"
 import NewsContainer from "../components/news-components/news-container"
 import NewsImageCard from "../components/news-components/news-image-card"
@@ -24,7 +25,8 @@ const sortingOptions = [
 
 const News = () => (
     <Layout>
-        <Body sx={{ overflowY: "scroll", overflowX: "hidden" }}>
+        {/* <Body sx={{ overflowY: "scroll", overflowX: "hidden" }}> */}
+        <Body>
             <BodyContent sx={{
                 height: "100%",
                 display: "flex",
@@ -33,17 +35,19 @@ const News = () => (
                 justifyContent: "flex-start",
                 backgroundColor: "transparent",
             }}>
-                <BodyContentHeader
-                    sx={{
-                        marginTop: "1em",
-                        marginBottom: "1em",
-                        height: "20%",
-                        width: "80%",
-                        justifyContent: "space-between",
-                    }}>
-                    <h1>News</h1>
-                    <BodySearchBar sortingOptions={sortingOptions} />
-                </BodyContentHeader>
+                <MainHeader>
+                    <BodyContentHeader
+                        sx={{
+                            marginTop: "1em",
+                            marginBottom: "1em",
+                            height: "20%",
+                            width: "80%",
+                            justifyContent: "space-between",
+                        }}>
+                        <h1>News</h1>
+                        <BodySearchBar sortingOptions={sortingOptions} />
+                    </BodyContentHeader>
+                </MainHeader>
 
                 <NewsContainer>
                     <NewsImageCard>

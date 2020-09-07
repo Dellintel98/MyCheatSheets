@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
 import SideBarCreators from "../components/sidebar/sidebar-creators"
+import MainHeader from "../components/main-header"
 import BodyContentHeader from "../components/body-content/body-content-header"
 import BodySearchBar from "../components/body-content/body-search-bar"
 import CreatorsContainer from "../components/creators-components/creators-container"
@@ -30,17 +31,19 @@ const Creators = () => (
                 justifyContent: "flex-start",
                 backgroundColor: "transparent",
             }}>
-                <BodyContentHeader
-                    sx={{
-                        marginTop: "1em",
-                        marginBottom: "1em",
-                        height: "20%",
-                        width: "80%",
-                        justifyContent: "space-between",
-                    }}>
-                    <h1>Creators</h1>
-                    <BodySearchBar sortingOptions={sortingOptions} />
-                </BodyContentHeader>
+                <MainHeader>
+                    <BodyContentHeader
+                        sx={{
+                            marginTop: "1em",
+                            marginBottom: "1em",
+                            height: "20%",
+                            width: "80%",
+                            justifyContent: "space-between",
+                        }}>
+                        <h1>Creators</h1>
+                        <BodySearchBar sortingOptions={sortingOptions} />
+                    </BodyContentHeader>
+                </MainHeader>
                 <CreatorsContainer>
                     <h2>C</h2>
                     <CreatorsCard>

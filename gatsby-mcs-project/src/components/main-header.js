@@ -11,7 +11,7 @@ const ForumHeader = props => {
                 alignItems: "center",
                 justifyContent: "space-between",
                 backgroundColor: "lawngreen",
-                // backgroundColor: "transparent",
+                backgroundColor: "transparent",
                 width: "90%",
                 height: "20%",
                 maxHeight: "20%",

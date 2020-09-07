@@ -25,6 +25,7 @@ const sortingOptions = [
 ]
 
 const filterOptions = [
+    {value: 'filter-no-filter', label: 'Filter - no filter'}, // nadodati input||drop za upisati te keyworde
     {value: 'keyword', label: 'Keyword'}, // nadodati input||drop za upisati te keyworde
     {value: 'no-accepted-answer', label: 'No accepted answer'},
     {value: 'no-answers', label: 'No answers'}
@@ -35,7 +36,7 @@ const questions = [
     {
         questionId: 0,
         questionTitle: '1st Question',
-        questionText: 'This is a first question and if you aks me it is not a very good question. And while this is quite entertaining, I am not fond of it. Further more I hope to embrace it or maybe not. Cheers and farewell, I hope to see you some other day.',
+        questionText: 'This is a first question and if you ask me it is not a very good question. And while this is quite entertaining, I am not fond of it. Further more I hope to embrace it or maybe not. Cheers and farewell, I hope to see you some other day.',
         keywords: ['javascript', 'jquery', 'ajax'],
         author: 'Antonio Josip Šolić',
         authorAvatar: '',
@@ -80,7 +81,8 @@ const totalQuestions = questions.length;
 
 const Forum = () => (
     <Layout>
-        <Body sx={{ overflowY: "scroll", overflowX: "hidden" }} >
+        {/* <Body sx={{ overflowY: "scroll", overflowX: "hidden" }} > */}
+        <Body>
             <BodyContent
                 sx={{
                     height: "98%",
@@ -98,12 +100,12 @@ const Forum = () => (
                             justifyContent: "space-between",
                             borderBottom: "1px solid",
                             borderColor: "iconGrey",
-                            backgroundColor: "transparent",
+                            // backgroundColor: "transparent",
                         }}
                     >
-                        <Styled.h2>Forum</Styled.h2>
+                        <Styled.h3>Forum</Styled.h3>
                         <HeaderContainer>
-                            <BodySearchBar sortingOptions={sortingOptions} />
+                            <BodySearchBar currentPage="forum" sortingOptions={sortingOptions} filterOptions={filterOptions} />
                             <NewQuestionButton />
                         </HeaderContainer>
                     </BodyContentHeader>

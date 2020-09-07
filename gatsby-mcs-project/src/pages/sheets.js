@@ -47,7 +47,7 @@ const Sheets = () => (
                         }}
                     >
                         <h1>Sheets</h1>
-                        <BodySearchBar sortingOptions={sortingOptions} />
+                        <BodySearchBar currentPage="sheets" sortingOptions={sortingOptions} />
                     </BodyContentHeader>
                 </MainHeader>
                 <SheetsContainer>

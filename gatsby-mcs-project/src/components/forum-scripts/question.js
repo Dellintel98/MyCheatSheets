@@ -9,6 +9,7 @@ import QuestionTextContainer from "./question-text-container"
 import QuestionAuthorContainer from "./forum-author-container"
 
 const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis);
+const pStyled = Styled.p;
 
 const Question = ({question, ...props}) => {
     const questionDate = new Date(question.timestamp);
@@ -57,7 +58,7 @@ const Question = ({question, ...props}) => {
                     ellipsis="..."
                     trimRight
                     basedOn="letters"
-                    component="Styled.p"
+                    component={pStyled}
                 />
             </QuestionTextContainer>
             <InformationContainer containerWidth="17%" sx={{ paddingRight: "20px" }}>
