@@ -59,9 +59,6 @@ const LogoLink = ({windowWidth}) => {
 
 
 const NavBar = ({ windowWidth, menuItems, handleLogin, handleLogout, isUserLoggedIn }) => {
-    const hiddenMenuVisible = (windowWidth < 1250) ? true : false;
-    const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
-
     const [showLoginModal, setShowLoginModal] = useState(false);
     const handleShow = () => {
         if(!isUserLoggedIn){
@@ -72,6 +69,15 @@ const NavBar = ({ windowWidth, menuItems, handleLogin, handleLogout, isUserLogge
     }
     const handleCloseModal = () => {
         setShowLoginModal(false);
+    }
+
+    const { navigationItems, hiddenItems} = calculateResponsivity(windowWidth, menuItems);
+    
+    let hiddenMenuVisible = false;
+    if(isUserLoggedIn && windowWidth < 1250 || !isUserLoggedIn && windowWidth < 1180){
+        hiddenMenuVisible = true;
+    } else {
+        hiddenMenuVisible = false;
     }
 
     return (

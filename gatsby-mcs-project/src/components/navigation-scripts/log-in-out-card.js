@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {jsx} from "theme-ui"
 
+
 const LogInOutCard = ({onclick, isUserLoggedIn}) => {
     const logInOutText = (!isUserLoggedIn) ? "Log in" : "Log out";
 

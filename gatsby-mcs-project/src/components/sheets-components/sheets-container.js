@@ -8,13 +8,15 @@ const SheetsContainer = props => {
             sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "left",
-                width: "50%",
+                alignItems: "center",
+                justifyContent: "space-around",
+                width: "65%",
                 height: "auto",
                 maxWidth: "screenWidth",
-                //backgroundColor: "lightred",
-                overflow: "hidden",
-                borderBottom: "1px solid gray"
+                // backgroundColor: "seagreen",
+                borderBottom: "1px solid gray",
+                marginBottom: "60px",
+                paddingBottom: "10px",
             }}
         />
     )

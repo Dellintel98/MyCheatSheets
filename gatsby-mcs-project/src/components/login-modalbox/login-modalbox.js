@@ -95,8 +95,8 @@ const LoginModal = ({handleClosing, handleLogin, windowWidth}) => {
                 buttonImage={CloseSvg}
                 buttonTop={3}
                 buttonRight={3}
-                divTop="0"
-                divRight="0"
+                divTop={0}
+                divRight={0}
                 divHeight="screenHeight"
                 divWidth="screenWidth"
                 alignButton="start"

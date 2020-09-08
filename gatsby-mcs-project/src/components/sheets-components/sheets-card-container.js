@@ -8,12 +8,14 @@ const SheetsCardContainer = props => {
             sx={{
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "left",
+                alignItems: "center",
+                justifyContent: "space-around",
                 width: "100%",
-                height: "auto",
+                minHeight: "70%",
                 maxWidth: "screenWidth",
-                //backgroundColor: "pink",
-                overflow: "hidden",
+                // backgroundColor: "teal",
+                py: 3,
+                marginBottom: 2,
             }}
         />
     )

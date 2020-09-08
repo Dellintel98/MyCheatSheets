@@ -9,11 +9,9 @@ const CreatorContainer = props => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "left",
-                width: "20%",
+                width: "100%",
                 height: "auto",
-                maxWidth: "screenWidth",
-                //backgroundColor: "blue",
-                overflow: "hidden",
+                // backgroundColor: "teal",
                 borderBottom: "1px solid gray"
             }}
 

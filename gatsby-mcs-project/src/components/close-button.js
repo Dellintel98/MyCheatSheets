@@ -10,6 +10,8 @@ const CloseButton = ({
     divWidth,
     divTop,
     divRight,
+    buttonTop,
+    buttonRight,
     buttonMargin,
     alignButton,
     justifyButton,
@@ -37,6 +39,9 @@ const CloseButton = ({
                 src={buttonImage}
                 alt="Close button"
                 sx={{
+                    position: "absolute",
+                    top: buttonTop,
+                    right: buttonRight,
                     height: buttonHeight,
                     maxHeight: "90px",
                     width: buttonWidth,

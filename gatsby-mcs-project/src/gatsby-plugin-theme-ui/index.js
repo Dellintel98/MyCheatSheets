@@ -14,6 +14,9 @@ const theme = {
         navLinksHeight: "38px",
         siteContainer: "60%",
     },
+    breakpoints: [
+        "350px", "450px", "600px", "700px", "900px", "1000px", "1060px", "1120px", "1180px", "1250px"
+    ],
     colors: {
         ...roboto.colors,
         text: roboto.colors.text, // Website text color
@@ -58,7 +61,7 @@ const theme = {
     styles: {
         h1: {
             ...roboto.styles.h1,
-            fontSize: 7,
+            fontSize: [3, 3, 4, 5, 5, 6, null, null, null, 7],
         },
         h2: {
             ...roboto.styles.h2,
@@ -92,7 +95,6 @@ const theme = {
             ...roboto.styles.code,
             fontFamily: "consolas",
         },
-
     }
 
 }

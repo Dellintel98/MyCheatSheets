@@ -4,13 +4,14 @@ import Layout from "../components/layout"
 import SideBarNews from "../components/sidebar/sidebar-forum"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
+import MainHeader from "../components/main-header"
 import BodyContentHeader from "../components/body-content/body-content-header"
 import NewsImage from "../images/windows.jpg"
 import ArticleTextContainer from "../components/news-components/article-text-container"
 
 const NewsArticle = () => (
     <Layout>
-        <Body sx={{ overflow: "scrollbar", }}>
+        <Body sx={{ overflow: "scroll", }}>
             <BodyContent sx={{
                 height: "100%",
                 display: "flex",

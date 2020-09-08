@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import Layout from "../components/layout"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
+import MainHeader from "../components/main-header"
 import BodyContentHeader from "../components/body-content/body-content-header"
 import BodySearchBar from "../components/body-content/body-search-bar"
 import SeeThroughContainer from "../components/sheets-components/See-through-container"
@@ -12,8 +13,8 @@ import IndexPageBackgroundImage from "../images/background-images/laptop-and-not
 import CreatorIcon from "../components/sheets-components/creator-icon"
 import MySheetIcon from "../components/sheets-components/mysheet-icon"
 import CreatorAvatar from "../images/avatar.svg"
-import CFileIcon from "../images/file-icons/c_file_icon.svg"
-import CppFileIcon from "../images/file-icons/c++_file_icon.svg"
+// import CFileIcon from "../images/file-icons/c_file_icon.svg"
+// import CppFileIcon from "../images/file-icons/c++_file_icon.svg"
 import AddNew from "../components/sheets-components/add-new-icon"
 
 const sortingOptions = [
@@ -54,8 +55,8 @@ const MySheets = () => (
                         <BodySearchBar sortingOptions={sortingOptions} />
                     </BodyContentHeader>
                     <MySheetContainer>
-                        <MySheetIcon iconImage={CFileIcon} iconName="cFileIcon" number="88" />
-                        <MySheetIcon iconImage={CppFileIcon} iconName="cFileIcon" number="23" />
+                        {/* <MySheetIcon iconImage={CFileIcon} iconName="cFileIcon" number="88" /> */}
+                        {/* <MySheetIcon iconImage={CppFileIcon} iconName="cFileIcon" number="23" /> */}
                         <AddNew />
                     </MySheetContainer>
                 </SeeThroughContainer>

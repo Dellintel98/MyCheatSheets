@@ -9,12 +9,11 @@ const BodyContentHeader = props => {
             sx={{
                 height: "10%",
                 width: "100%",
-                //background: "pink",
+                // background: "pink",
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "row",
-            }
-            }>
+            }}>
 
         </div >
     )

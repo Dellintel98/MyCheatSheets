@@ -38,7 +38,7 @@ const SearchBar = ({
             }}
         >
             <input
-                type="text"
+                type="search"
                 placeholder="Search..."
                 sx={{
                     width: "100%",

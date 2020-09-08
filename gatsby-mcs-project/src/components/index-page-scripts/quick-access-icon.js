@@ -2,20 +2,20 @@
 import {jsx} from "theme-ui"
 
 
-const QuickAccessIcon = ({iconImage, iconName}) => {
-    const iconSize = "152px";
-    // const iconSize = "162px";
+const QuickAccessIcon = ({iconImage, iconSize=["180px", null, "150px", null, null, null, null, null, null, "130px", "152px"]}) => {
 
     return(
         <div
             sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 backgroundColor: "white",
                 width: iconSize,
+                minWidth: iconSize,
+                maxWidth: iconSize,
                 height: iconSize,
-                mx: "17px",
+                minHeight: iconSize,
+                maxHeight: iconSize,
+                mx: ["0px", "17px"],
+                marginBottom: ["2rem", null, null, null, null, "0.5rem"],
                 overflow: "hidden",
                 border: "0px hidden transparent",
                 borderRadius: "4px",
@@ -24,25 +24,13 @@ const QuickAccessIcon = ({iconImage, iconName}) => {
                 '&:hover': {
                     boxShadow: '4px 4px 7px rgba(0, 0, 0, 0.38)',
                     backgroundColor: "alternateGrey",
-                }
+                },
+                backgroundSize: "cover",
+                backgroundImage: `url(${iconImage})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "0px 0px",
             }}
-        >
-            <img
-                src={iconImage}
-                alt={iconName}
-                sx={{
-                    height: "100%",
-                    width: "auto",
-                    // border: "0px hidden transparent",
-                    // borderRadius: "50%",
-                    // boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.28)',
-                    // '&:hover': {
-                    //     boxShadow: '4px 4px 10px rgba(0, 0, 0, 0.38)',
-                    //     backgroundColor: "alternateGrey",
-                    // }
-                }}
-            />
-        </div>
+        />
     )
 }
 
