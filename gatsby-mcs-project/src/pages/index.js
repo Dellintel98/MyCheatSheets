@@ -25,6 +25,7 @@ const IndexPage = () => (
             <BodyContent
                 sx={{
                     height: "100%",
+                    width: "100%",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
@@ -34,6 +35,7 @@ const IndexPage = () => (
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    overflowY: "scroll",
                 }}
             >
                 <LogoTitle logoTitle={LogoTitleImage} />

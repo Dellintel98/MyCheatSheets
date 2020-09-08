@@ -11,10 +11,11 @@ const QuickAccessIconContainer = ({...props}) => {
             sx={{
                 display: "flex",
                 flexDirection: "row",
-                // backgroundColor: "slateblue",
                 height: "30%",
-                alignItems: "flex-start",
+                width: ["60%", null, "100%", null, "80%", "70%", "60%", null, "70%", null, "58.5%"],
+                alignItems: ["center", null, null, "flex-start"],
                 justifyContent: "center",
+                flexWrap: ["wrap", null, null, null, null, null, null, null, null, null, "nowrap"],
             }}
         />
     )

@@ -6,8 +6,8 @@ const BodyContent = props => {
         <div
             {...props}
             sx={{
-                //backgroundColor: "slateblue",
-                width: "100%",
+                backgroundColor: "white",
+                width: "81.6%",
                 //minHeight: "100%",
                 height: "auto",
             }}

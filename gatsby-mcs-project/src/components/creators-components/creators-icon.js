@@ -1,37 +1,40 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
+import CreatorAvatar from "../../images/avatar-icons/person.svg"
 
 
-const CreatorIcon = ({ iconImage, iconName, username, }) => {
-    var iconSize = "30px";
-    // const iconSize = "162px";
+const CreatorIcon = ({ iconImage, username, iconSize="32px"}) => {
+    const avatarIcon = (iconImage === "") ? CreatorAvatar : iconImage;
 
     return (
         <div
             sx={{
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "left",
-                //justifyContent: "center",
-                //backgroundColor: "pink",
-                width: "100%",
+                alignItems: "center",
+                justifyContent: "space-around",
+                // backgroundColor: "wheat",
+                width: "70%",
                 height: iconSize,
-                overflow: "hidden",
-
-
+                cursor: "pointer",
             }}
         >
             <img
-                src={iconImage}
-                alt={iconName}
+                src={avatarIcon}
+                alt="Creator avatar"
                 sx={{
                     height: "100%",
                     width: "auto",
+                    borderRadius: "50%",
+                    border: "1px solid black",
+                    '&:hover': {
+                        backgroundColor: "alternateGrey",
+                    }
                 }}
             />
-            <p>
+            <Styled.h6 sx={{color: "primary", '&:hover':{color: "highlight2"}}}>
                 {username}
-            </p>
+            </Styled.h6>
         </div>
     )
 }

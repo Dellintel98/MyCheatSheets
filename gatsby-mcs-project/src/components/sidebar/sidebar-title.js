@@ -14,7 +14,7 @@ const SideBarTitle = props => {
                 textEmphasisColor: "none",
                 py: 1,
                 alignSelf: "center",
-                boxShadow: '2px 0px 3px rgba(0, 0, 0, 0.25)',
+                boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.25)',
                 '&:hover': {
                     cursor: "default",
                 },

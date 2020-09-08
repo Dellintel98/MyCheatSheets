@@ -11,8 +11,10 @@ const CreatorCard = props => {
                 alignItems: "center",
                 width: "100%",
                 height: "auto",
+                py: 2,
+                my: 2,
                 maxWidth: "screenWidth",
-                //backgroundColor: "red",
+                // backgroundColor: "seagreen",
             }}
         />
     )

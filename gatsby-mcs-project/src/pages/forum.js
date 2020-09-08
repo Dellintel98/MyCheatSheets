@@ -17,7 +17,7 @@ import KeywordLabelsContainer from "../components/forum-scripts/keyword-labels-c
 
 
 const sortingOptions = [
-    {value: 'sort-by-date-newest', label: 'Sort by date (newest)'},
+    {value: 'date-newest', label: 'Date (newest)'},
     {value: 'date-oldest', label: 'Date (oldest)'},
     {value: 'recent-activity', label: 'Recent activity'},
     {value: 'most-votes', label: 'Most votes'},
@@ -25,8 +25,7 @@ const sortingOptions = [
 ]
 
 const filterOptions = [
-    {value: 'filter-no-filter', label: 'Filter - no filter'}, // nadodati input||drop za upisati te keyworde
-    {value: 'keyword', label: 'Keyword'}, // nadodati input||drop za upisati te keyworde
+    {value: 'keyword', label: 'Keyword'},
     {value: 'no-accepted-answer', label: 'No accepted answer'},
     {value: 'no-answers', label: 'No answers'}
 ]
@@ -47,34 +46,6 @@ const questions = [
         hasAcceptedAnswer: true,
         lastActivityTimestamp: '2020-09-06T13:47:56.359Z',
     },
-    {
-        questionId: 1,
-        questionTitle: '2nd Question',
-        questionText: 'This is a second question',
-        keywords: ['c++', 'pthreads'],
-        author: 'Creator54',
-        authorAvatar: '',
-        timestamp: '2020-09-06T13:47:56.359Z',
-        answerCounter: 0,
-        voteCounter: {positive: 2, negative: 3, total: -1},
-        viewCounter: 13,
-        hasAcceptedAnswer: false,
-        lastActivityTimestamp: '2020-09-06T13:49:56.042Z',
-    },
-    {
-        questionId: 2,
-        questionTitle: '3rd Question',
-        questionText: 'This is a third question',
-        keywords: ['vba', 'ms-access'],
-        author: 'Creator01',
-        authorAvatar: '',
-        timestamp: '2020-09-06T13:49:56.042Z',
-        answerCounter: 0,
-        voteCounter: {positive: 0, negative: 0, total: 0},
-        viewCounter: 2,
-        hasAcceptedAnswer: false,
-        lastActivityTimestamp: '2020-09-06T13:49:56.042Z',
-    },
 ]
 
 const totalQuestions = questions.length;
@@ -82,7 +53,7 @@ const totalQuestions = questions.length;
 const Forum = () => (
     <Layout>
         {/* <Body sx={{ overflowY: "scroll", overflowX: "hidden" }} > */}
-        <Body>
+        <Body sx={{ overflowY: "scroll" }}>
             <BodyContent
                 sx={{
                     height: "98%",
@@ -90,7 +61,7 @@ const Forum = () => (
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "flex-start",
-                    backgroundColor: "transparent",
+                    // backgroundColor: "transparent",
                 }}
             >
                 <MainHeader>
@@ -109,12 +80,11 @@ const Forum = () => (
                             <NewQuestionButton />
                         </HeaderContainer>
                     </BodyContentHeader>
-                    {/* <BodyDivisionLine /> */}
                     <ForumLabelCard labelText="asked questions" labelValue={totalQuestions} />
                 </MainHeader>
                 <MultipleQuestionContainer>
                     {questions.map((question) => (
-                        <QuestionContainer topMargin="0em" key={question.questionId} >
+                        <QuestionContainer key={question.questionId} >
                             <Question question={question} />
                             <KeywordLabelsContainer keywords={question.keywords} />
                         </QuestionContainer>

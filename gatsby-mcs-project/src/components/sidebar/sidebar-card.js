@@ -11,7 +11,7 @@ const SidebarCard = props => {
                 //backgroundColor: "orange",
                 marginLeft: 0,
                 paddingLeft: 3,
-                paddingRight: 4,
+                paddingRight: "13px",
                 width: "90%",
                 height: "33%",
                 overflow: "hidden",

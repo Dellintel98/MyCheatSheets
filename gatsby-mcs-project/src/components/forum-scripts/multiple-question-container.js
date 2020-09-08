@@ -11,11 +11,9 @@ const MultipleQuestionContainer = props => {
                 alignItems: "center",
                 justifyContent: "space-between",
                 // backgroundColor: "mediumaquamarine",
-                backgroundColor: "transparent",
+                backgroundColor: "white",
                 width: "70%",
-                height: "80%",
-                minHeight: "80%",
-                maxHeight: "80%",
+                height: "auto",
             }}
         />
     )

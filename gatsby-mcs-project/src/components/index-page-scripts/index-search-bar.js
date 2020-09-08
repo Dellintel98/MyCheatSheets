@@ -17,9 +17,10 @@ const IndexPageSearchBar = () => {
             }}
         >
             <SearchBar 
-                inputWidth="58.5%"
+                // inputWidth="58.5%"
+                inputWidth={["82%", "70%", null, null, "60%", null, null, "58.5%"]}
                 fontsize={4}
-                height="40%"
+                height={["30%", null, null, "40%"]}
                 searchIconHeight="70%"
                 iconYPadding="8px"
                 iconXPadding="10px"

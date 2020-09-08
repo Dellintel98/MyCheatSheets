@@ -6,6 +6,7 @@ import FilterBox from "../filter-box"
 
 const BodySearchBar = ({currentPage, sortingOptions, filterOptions}) => {
     const isForumCurrentPage = (currentPage === "forum") ? true : false;
+    const leftMargin = (isForumCurrentPage) ? "0px" : "25px";
 
     return (
         <div
@@ -13,16 +14,17 @@ const BodySearchBar = ({currentPage, sortingOptions, filterOptions}) => {
                 height: "100%",
                 width: "70%",
                 backgroundColor: "black",
-                // backgroundColor: "transparent",
+                backgroundColor: "transparent",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: "left",
+                marginLeft: leftMargin,
             }}
         >
             <SearchBar 
-                inputWidth="70%"
+                inputWidth="60%"
                 fontsize={3}
-                height="40%"
+                height="39%"
                 searchIconHeight="70%"
                 iconYPadding="6px"
                 iconXPadding="7px"

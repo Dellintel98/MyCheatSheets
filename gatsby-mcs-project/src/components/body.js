@@ -6,12 +6,14 @@ const Body = props => {
         <div
             {...props}
             sx={{
+                position: "relative",
                 width: "100vw",
-                height: "93%",
+                height: "94%",
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "flex-start",
                 justifyContent: "space-between",
+                backgroundColor: "white"
             }}
         />
     )

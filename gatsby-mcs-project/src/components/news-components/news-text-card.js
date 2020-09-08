@@ -2,9 +2,10 @@
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 
-const NewsTextCard = props => {
+const NewsTextCard = ({onclick, ...props}) => {
     return (
         <Link to="../news-article"
+            onClick={onclick}
             {...props}
             sx={{
                 display: "flex",
@@ -13,15 +14,10 @@ const NewsTextCard = props => {
                 justifyContent: "flex-start",
                 width: "60%",
                 height: "100%",
-                maxWidth: "screenWidth",
                 // backgroundColor: "blue",
                 color: "primary",
                 marginLeft: "2em",
                 marginRight: "2em",
-                whiteSpace: "wrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                textAlign: "justify",
             }}
         />
     )

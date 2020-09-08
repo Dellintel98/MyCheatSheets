@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-const QuestionContainer = ({topMargin="1.65em", ...props}) => {
+const QuestionContainer = ({margin="1em", ...props}) => {
     return (
         <div
             {...props}
@@ -16,7 +16,7 @@ const QuestionContainer = ({topMargin="1.65em", ...props}) => {
                 height: "30%",
                 minHeight: "30%",
                 maxHeight: "30%",
-                marginTop: topMargin,
+                marginBottom: margin,
             }}
         />
     )

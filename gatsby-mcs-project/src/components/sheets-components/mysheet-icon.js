@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import CheckedIcon from "../../images/checked_icon.svg"
 
-const MySheetIcon = ({ iconImage, iconName, number }) => {
-    var iconSize = "60px";
+const MySheetIcon = ({ iconImage, iconName, number, iconSize="70px" }) => {
     return (
         <div
             sx={{
+                position: "relative",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -14,28 +14,35 @@ const MySheetIcon = ({ iconImage, iconName, number }) => {
                 backgroundColor: "alternateGrey",
                 width: "100px",
                 height: "120px",
-                overflow: "hidden",
-                boxShadow: "5px 5px 10px rgba(0,0,0,0.6)",
-                borderRadius: "5px",
+                boxShadow: "4px 5px 10px rgba(0,0,0,0.25)",
+                borderRadius: "4px",
+                cursor: "pointer",
+                '&:hover': {
+                    backgroundColor: "backgroundGrey",
+                    boxShadow: "4px 5px 10px rgba(0,0,0,0.35)",
+                }
             }}
         >
-
             <img
                 src={iconImage}
                 alt={iconName}
                 sx={{
                     height: iconSize,
                     width: iconSize,
-                    //backgroundColor: "blue",
+                    // backgroundColor: "blue",
                 }}
             />
             <div
                 sx={{
                     display: "flex",
                     flexDirection: "row",
-                    alignItems: "left",
-                    justifyContent: "center",
-                    //backgroundColor: "yellow",
+                    alignItems: "center",
+                    justifyContent: "left",
+                    // backgroundColor: "yellow",
+                    width: "auto",
+                    position: "absolute",
+                    bottom: 0.5,
+                    left: 1,
                 }}
             >
                 <img
@@ -45,9 +52,9 @@ const MySheetIcon = ({ iconImage, iconName, number }) => {
                         width: "20px",
                     }}
                 />
-                <p>
+                <Styled.p>
                     {number}
-                </p>
+                </Styled.p>
             </div>
         </div>
     )

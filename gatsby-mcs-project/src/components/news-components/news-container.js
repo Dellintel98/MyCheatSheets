@@ -8,8 +8,10 @@ const NewsContainer = props => {
             {...props}
             sx={{
                 display: "flex",
+                flexFlow: "row",
                 width: "80%",
-                height: "35%",
+                height: "auto",
+                minHeight: "250px",
                 maxWidth: "screenWidth",
                 marginTop: "1em",
                 marginBottom: "2em",

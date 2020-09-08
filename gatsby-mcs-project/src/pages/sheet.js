@@ -1,39 +1,54 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import Layout from "../components/layout"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
 import MainHeader from "../components/main-header"
-import SideBarEditorPdf from "../components/sidebar/sidebar-editor-pdf"
+import BodyContentHeader from "../components/body-content/body-content-header"
 import SideBarEditorText from "../components/sidebar/sidebar-editor-text"
-import SideBarEditorImage from "../components/sidebar/sidebar-editor-image"
-// import SideBarEditor from "../components/sidebar/sidebar-editor-pdf"
+import EmptySheetIcon from "../images/file-icons/empty-sheet.svg"
 
-function CheckEditorType(editorType) {
-    if (editorType === "pdf") {
-        return (
-            <SideBarEditorPdf />
-        )
-    }
-    else if (editorType === "text") {
-        return (
-            <SideBarEditorText />
-        )
-    }
-    else if (editorType === "image") {
-        return (
-            <SideBarEditorImage />
-        )
-    }
-}
 
 const Sheet = () => (
     <Layout>
-        <Body>
-            <BodyContent>
-                <h1>Sheet</h1>
+        <Body sx={{ overflowY: "scroll", }}>
+            <BodyContent
+                sx={{
+                    height: "98%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    // backgroundColor: "transparent",
+                }}
+            >
+                <MainHeader>
+                    <BodyContentHeader
+                        sx={{
+                            height: "70%",
+                            justifyContent: "left",
+                            borderBottom: "1px solid",
+                            borderColor: "iconGrey",
+                            // backgroundColor: "transparent",
+                        }}
+                    >
+                        <div
+                            sx={{
+                                display: "flex",
+                                height: "40%",
+                                width: "3.1%",
+                                marginRight: "15px",
+                                backgroundSize: "cover",
+                                backgroundImage: `url(${EmptySheetIcon})`,
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition: "0px 0px",
+                            }}
+                        />
+                        <Styled.h3>Sheet</Styled.h3>
+                    </BodyContentHeader>
+                </MainHeader>
             </BodyContent>
-            {CheckEditorType("image")}
+            <SideBarEditorText />
         </Body>
     </Layout>
 )

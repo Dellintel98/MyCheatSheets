@@ -1,28 +1,29 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import MySheetIcon from "../sheets-components/mysheet-icon"
 import CreatorIcon from "../creators-components/creators-icon"
-import CreatorAvatar from "../../images/avatar.svg"
 
-const SheetCard = ({ IconImage, IconName, Number, SheetTitle, Username }) => {
+
+const SheetCard = ({ sheetOptions }) => {
+
     return (
         <div
             sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "left",
-                justifyContent: "center",
+                alignItems: "center",
+                justifyContent: "space-between",
+                backgroundColor: "thistle",
                 backgroundColor: "transparent",
                 width: "100px",
-                height: "auto",
-                overflow: "hidden",
+                height: "100%",
             }}
         >
-            <MySheetIcon iconImage={IconImage} iconName={IconName} number={Number} />
-            <p>
-                {SheetTitle}
-            </p>
-            <CreatorIcon iconImage={CreatorAvatar} iconName={"avatar"} username={Username} />
+            <MySheetIcon iconImage={sheetOptions.sheetIcon} iconName={sheetOptions.iconName} number={sheetOptions.voteCounter} />
+            <Styled.h6>
+                {sheetOptions.title}
+            </Styled.h6>
+            <CreatorIcon iconImage={sheetOptions.creatorAvatar} username={sheetOptions.creator} />
         </div>
     )
 }

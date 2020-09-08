@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import AvatarIcon from "../../images/avatar-icons/male.svg"
+import AvatarIcon from "../../images/avatar-icons/person.svg"
 
 const ForumAuthorContainer = ({authorName, authorAvatar}) => {
     const avatarIcon = (authorAvatar === '') ? AvatarIcon : authorAvatar;

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import Layout from "../components/layout"
 import Body from "../components/body"
 import BodyContent from "../components/body-content"
@@ -10,19 +10,17 @@ import BodySearchBar from "../components/body-content/body-search-bar"
 import CreatorsContainer from "../components/creators-components/creators-container"
 import CreatorsCard from "../components/creators-components/creator-card"
 import CreatorsIcon from "../components/creators-components/creators-icon"
-import CreatorAvatar from "../images/avatar.svg"
+import CreatorAvatar from "../images/avatar-icons/person.svg"
 
 const sortingOptions = [
-    { value: 'sort-by', label: 'Sort by' },
-    { value: 'date-oldest', label: 'Date (oldest)' },
-    { value: 'date-newest', label: 'Date (newest)' },
-    { value: 'views-most', label: 'Views (most)' },
-    { value: 'views-least', label: 'Views (least)' }
+    {value: 'a-z', label: 'A-Z'},
+    {value: 'z-a', label: 'Z-A'},
 ]
+
 
 const Creators = () => (
     <Layout>
-        <Body sx={{ overflow: "scrollbar", }}>
+        <Body sx={{ overflowY: "scroll", }}>
             <BodyContent sx={{
                 height: "100%",
                 display: "flex",
@@ -34,23 +32,81 @@ const Creators = () => (
                 <MainHeader>
                     <BodyContentHeader
                         sx={{
-                            marginTop: "1em",
-                            marginBottom: "1em",
-                            height: "20%",
-                            width: "80%",
-                            justifyContent: "space-between",
+                            height: "70%",
+                            justifyContent: "left",
+                            borderBottom: "1px solid",
+                            borderColor: "iconGrey",
+                            // backgroundColor: "transparent",
                         }}>
-                        <h1>Creators</h1>
+                        <Styled.h3>Creators</Styled.h3>
                         <BodySearchBar sortingOptions={sortingOptions} />
                     </BodyContentHeader>
                 </MainHeader>
-                <CreatorsContainer>
-                    <h2>C</h2>
-                    <CreatorsCard>
-                        <CreatorsIcon iconImage={CreatorAvatar} iconName="avatar" username="creator01" />
-                        <CreatorsIcon iconImage={CreatorAvatar} iconName="avatar" username="creator0123" />
-                    </CreatorsCard>
-                </CreatorsContainer>
+                <div 
+                    sx={{
+                        width: "80%",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                    }}
+                >
+                    <div
+                        sx={{
+                            width: "30%", 
+                            height: "100%",
+                            display: "flex",
+                            flexFlow: "column",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        <CreatorsContainer>
+                            <h2>C</h2>
+                            <CreatorsCard>
+                                <CreatorsIcon iconImage={CreatorAvatar} iconName="avatar" username="creator01" />
+                            </CreatorsCard>
+                        </CreatorsContainer>
+                    </div>
+                    <div 
+                        sx={{
+                            width: "33%",
+                            height: "100%",
+                            display: "flex",
+                            flexFlow: "column",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        <CreatorsContainer>
+                            <h2>C</h2>
+                            <CreatorsCard>
+                                <CreatorsIcon iconImage={CreatorAvatar} iconName="avatar" username="creator01" />
+                            </CreatorsCard>
+                        </CreatorsContainer>
+                    </div>
+                    <div 
+                        sx={{
+                            width: "30%",
+                            height: "100%",
+                            display: "flex",
+                            flexFlow: "column",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        <CreatorsContainer>
+                            <h2>C</h2>
+                            <CreatorsCard>
+                                <CreatorsIcon iconImage={CreatorAvatar} iconName="avatar" username="creator01" />
+                            </CreatorsCard>
+                            <CreatorsCard>
+                                <CreatorsIcon iconImage={CreatorAvatar} iconName="avatar" username="creator01" />
+                            </CreatorsCard>
+                        </CreatorsContainer>
+                    </div>
+                </div>
             </BodyContent>
             <SideBarCreators />
         </Body>

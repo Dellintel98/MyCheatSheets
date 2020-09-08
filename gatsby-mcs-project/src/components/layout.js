@@ -32,6 +32,7 @@ const Layout = props => {
 
   const userLoggedIn = globalState.isUserLoggedIn;
 
+
   const handleLogin = () => {
     if(!userLoggedIn){
       globalActions.setUserLoggedIn(true);

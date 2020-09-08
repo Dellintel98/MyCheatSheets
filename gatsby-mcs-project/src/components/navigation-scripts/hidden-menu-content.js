@@ -5,22 +5,6 @@ import MenuLink from "./hidden-menu-link"
 
 const MenuContent = ({menuItems, isUserLoggedIn}) => {
     const { location } = history;
-    let topMargin = "0px";
-    const numberOfItems = menuItems.length;
-
-    if(numberOfItems === 1) {
-        topMargin = `${43}px`;
-    } else if(numberOfItems === 2) {
-        topMargin = `${63}px`;
-    } else if(numberOfItems === 3) {
-        topMargin = `${83}px`;
-    }else if(numberOfItems === 4) {
-        topMargin = `${104}px`;
-    }else if(numberOfItems === 5) {
-        topMargin = `${124}px`;
-    } else if(numberOfItems === 6) {
-        topMargin = `${145}px`;
-    }
 
     return(
         <nav
@@ -29,8 +13,7 @@ const MenuContent = ({menuItems, isUserLoggedIn}) => {
                 minWidth: "200px",
                 maxWidth: "250px",
                 height: "auto",
-                marginLeft: "-65px",
-                marginTop: topMargin,
+                top: "44px",
                 display: "none",
                 flexDirection: "column",
                 justifyContent: "space-between",

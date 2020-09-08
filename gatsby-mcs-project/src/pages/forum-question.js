@@ -23,7 +23,7 @@ const sortingOptions = [
 
 const ForumQuestion = () => (
     <Layout>
-        <Body sx={{ overflowY: "scroll", overflowX: "hidden" }} >
+        <Body sx={{ overflowY: "scroll", }} >
             <BodyContent
                 sx={{
                     height: "98%",

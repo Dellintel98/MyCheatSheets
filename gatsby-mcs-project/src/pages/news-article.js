@@ -11,7 +11,7 @@ import ArticleTextContainer from "../components/news-components/article-text-con
 
 const NewsArticle = () => (
     <Layout>
-        <Body sx={{ overflow: "scrollbar", }}>
+        <Body sx={{ overflow: "scroll", }}>
             <BodyContent sx={{
                 height: "100%",
                 display: "flex",

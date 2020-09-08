@@ -14,7 +14,7 @@ const SideBarForum = () => {
     return (
         <SideBar
             sx={{
-                height: "100%",
+                height: "93%",
                 justifyContent: "top",
             }}
         >
